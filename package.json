@@ -1,0 +1,40 @@
+{
+  "name": "@maskingtech/designsystem",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "clean": "rimraf dist",
+    "lint": "eslint"
+  },
+  "module": "./dist/mtds.js",
+  "exports": {
+    ".": "./dist/mtds.js",
+    "./style.css": "./dist/mtds.css"
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "dependencies": {
+    "react": "19.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.6",
+    "@vitejs/plugin-react": "5.1.1",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-sonarjs": "3.0.5",
+    "rimraf": "6.1.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.47.0",
+    "vite": "7.2.4",
+    "vite-plugin-dts": "4.5.4"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.53.3"
+  }
+}
