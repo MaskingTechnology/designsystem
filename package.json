@@ -1,14 +1,14 @@
 {
   "name": "@maskingtech/designsystem",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "build": "vite build",
     "clean": "rimraf dist",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepublishOnly": "npm run build"
   },
-  "module": "./dist/mtds.js",
   "exports": {
     ".": "./dist/mtds.js",
     "./style.css": "./dist/mtds.css"
