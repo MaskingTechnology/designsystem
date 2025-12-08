@@ -70,7 +70,7 @@ Properties:
 Example:
 
 ```tsx
-import { Button } from '@maskingtech.designsystem';
+import { Button } from '@maskingtech/designsystem';
 
 <Button type='primary' size='medium' text='Save' onClick={() => console.log('clicked')} />
 ```
@@ -87,7 +87,7 @@ Properties:
 Example:
 
 ```tsx
-import { Cell } from '@maskingtech.designsystem';
+import { Cell } from '@maskingtech/designsystem';
 
 <Cell sizing='fixed'>Fixed content</Cell>
 ```
@@ -105,7 +105,7 @@ Properties:
 Example:
 
 ```tsx
-import { ClickArea } from '@maskingtech.designsystem';
+import { ClickArea } from '@maskingtech/designsystem';
 
 <ClickArea padding='small' onClick={() => alert('clicked')}>Clickable content</ClickArea>
 ```
@@ -125,7 +125,7 @@ Properties:
 Example:
 
 ```tsx
-import { Column } from '@maskingtech.designsystem';
+import { Column } from '@maskingtech/designsystem';
 
 <Column alignX='center' gap='small'>
   <div>Item 1</div>
@@ -145,7 +145,7 @@ Properties:
 Example:
 
 ```tsx
-import { Form } from '@maskingtech.designsystem';
+import { Form } from '@maskingtech/designsystem';
 
 <Form submitHandler={(form) => console.log('submit', form)}>
   {/* inputs here */}
@@ -165,7 +165,7 @@ Properties:
 Example:
 
 ```tsx
-import { Grid } from '@maskingtech.designsystem';
+import { Grid } from '@maskingtech/designsystem';
 
 <Grid layout='three-columns' gap='small'>
   <div>1</div>
@@ -185,7 +185,7 @@ Properties:
 Example:
 
 ```tsx
-import { Icon } from '@maskingtech.designsystem';
+import { Icon } from '@maskingtech/designsystem';
 
 <Icon type='search' />
 ```
@@ -206,7 +206,7 @@ Properties:
 Example:
 
 ```tsx
-import { Image } from '@maskingtech.designsystem';
+import { Image } from '@maskingtech/designsystem';
 
 <Image source='http://example.com/photo.jpg' alt='Example' width='200px' fit='cover' />
 ```
@@ -223,7 +223,7 @@ Properties:
 Example:
 
 ```tsx
-import { Input, Label, TextBox } from '@maskingtech.designsystem';
+import { Input, Label, TextBox } from '@maskingtech/designsystem';
 
 <Input label={<Label value='Name' />} element={<TextBox name='name' />} />
 ```
@@ -239,7 +239,7 @@ Properties:
 Example:
 
 ```tsx
-import { Label } from '@maskingtech.designsystem';
+import { Label } from '@maskingtech/designsystem';
 
 <Label value='Email' />
 ```
@@ -257,7 +257,7 @@ Properties:
 Example:
 
 ```tsx
-import { Link } from '@maskingtech.designsystem';
+import { Link } from '@maskingtech/designsystem';
 
 <Link url='https://example.com' target='_blank'>Visit</Link>
 ```
@@ -275,7 +275,7 @@ Properties:
 Example:
 
 ```tsx
-import { Modal } from '@maskingtech.designsystem';
+import { Modal } from '@maskingtech/designsystem';
 
 <Modal open={true} sizing='content'>
   <p>Modal content</p>
@@ -295,7 +295,7 @@ Properties:
 Example:
 
 ```tsx
-import { Panel } from '@maskingtech.designsystem';
+import { Panel } from '@maskingtech/designsystem';
 
 <Panel type='warning' padding='small'>Check this out</Panel>
 ```
@@ -312,7 +312,7 @@ Properties:
 Example:
 
 ```tsx
-import { Paragraph } from '@maskingtech.designsystem';
+import { Paragraph } from '@maskingtech/designsystem';
 
 <Paragraph size='small'>A short paragraph.</Paragraph>
 ```
@@ -332,7 +332,7 @@ Properties:
 Example:
 
 ```tsx
-import { Row } from '@maskingtech.designsystem';
+import { Row } from '@maskingtech/designsystem';
 
 <Row alignX='center' gap='large'>
   <div>Left</div>
@@ -352,7 +352,7 @@ Properties:
 Example:
 
 ```tsx
-import { Ruler } from '@maskingtech.designsystem';
+import { Ruler } from '@maskingtech/designsystem';
 
 <Ruler direction='horizontal' />
 ```
@@ -372,7 +372,7 @@ Properties:
 Example:
 
 ```tsx
-import { Select } from '@maskingtech.designsystem';
+import { Select } from '@maskingtech/designsystem';
 
 const options = new Map([['a', 'Option A'], ['b', 'Option B']]);
 
@@ -390,7 +390,7 @@ Properties:
 Example:
 
 ```tsx
-import { Spinner } from '@maskingtech.designsystem';
+import { Spinner } from '@maskingtech/designsystem';
 
 <Spinner active={true} />
 ```
@@ -410,7 +410,7 @@ Properties:
 Example:
 
 ```tsx
-import { Text } from '@maskingtech.designsystem';
+import { Text } from '@maskingtech/designsystem';
 
 <Text value='Label' type='secondary' size='small' />
 ```
@@ -432,7 +432,7 @@ Properties:
 Example:
 
 ```tsx
-import { TextArea } from '@maskingtech.designsystem';
+import { TextArea } from '@maskingtech/designsystem';
 
 <TextArea name='message' placeholder='Write...' rows={4} />
 ```
@@ -456,7 +456,7 @@ Properties:
 Example:
 
 ```tsx
-import { TextBox } from '@maskingtech.designsystem';
+import { TextBox } from '@maskingtech/designsystem';
 
 <TextBox name='firstName' placeholder='First name' />
 ```
@@ -473,7 +473,7 @@ Properties:
 Example:
 
 ```tsx
-import { Title } from '@maskingtech.designsystem';
+import { Title } from '@maskingtech/designsystem';
 
 <Title size='medium'>Section title</Title>
 ```
@@ -493,7 +493,7 @@ Properties:
 Example:
 
 ```tsx
-import { Dropdown } from '@maskingtech.designsystem';
+import { Dropdown } from '@maskingtech/designsystem';
 
 const opts = new Map([['a','A'],['b','B']]);
 <Dropdown options={opts} selected='a' onChange={(o,n)=>console.log(o,n)} />
@@ -519,7 +519,7 @@ Tabs provide a tabbed navigation. Use `Tab` elements as children of `Tabs`.
 Example:
 
 ```tsx
-import { Tabs, Tab } from '@maskingtech.designsystem';
+import { Tabs, Tab } from '@maskingtech/designsystem';
 
 <Tabs selectedId='tab1' onChange={(n,o)=>console.log(n,o)}>
   <Tab id='tab1' title='First'>First content</Tab>
