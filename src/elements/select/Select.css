@@ -1,19 +1,19 @@
-.ds
+.mtds
 {
     .select
     {
         --margin: 0;
 
-        --padding-small: 0.4em;
-        --padding-medium: 0.8em;
-        --padding-large: 1.2em;
+        --size-small: 0.4em;
+        --size-medium: 0.8em;
+        --size-large: 1.2em;
 
         --border-style: solid;
         --border-color: var(--color-border);
         --border-width: var(--width-border);
 
         margin: var(--margin);
-        padding: var(--padding);
+        padding: var(--size);
 
         border-style: var(--border-style);
         border-width: var(--border-width);
@@ -30,17 +30,17 @@
 
         &.size-small
         {
-            padding: var(--padding-small);
+            padding: var(--size-small);
         }
 
         &.size-medium
         {
-            padding: var(--padding-medium);
+            padding: var(--size-medium);
         }
 
         &.size-large
         {
-            padding: var(--padding-large);
+            padding: var(--size-large);
         }
     }
 }

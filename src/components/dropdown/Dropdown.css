@@ -1,6 +1,6 @@
-.ds
+.mtds
 {
-    .selection
+    .dropdown
     {
         --background-color: transparent;
         --background-color-options: var(--color-primary-background);

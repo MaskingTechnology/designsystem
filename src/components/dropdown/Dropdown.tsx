@@ -43,7 +43,7 @@ export default function Component({ options, selected, onChange }: Props)
     };
 
     return (
-        <div className='selection'>
+        <div className='dropdown'>
             <div className={showOptions ? 'text active' : 'text'} onClick={toggleOptions}>
                 {selectedText}
             </div>
