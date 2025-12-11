@@ -1,28 +1,28 @@
-.ds
+.mtds
 {
     .title
     {
         --margin: 0 0 0.8em 0;
 
-        --font-size-large: 2em;
-        --font-size-medium: 1.5em;
-        --font-size-small: 1em;
+        --size-large: 2em;
+        --size-medium: 1.5em;
+        --size-small: 1em;
 
         margin: var(--margin);
 
         &.size-large
         {
-            font-size: var(--font-size-large);
+            font-size: var(--size-large);
         }
 
         &.size-medium
         {
-            font-size: var(--font-size-medium);
+            font-size: var(--size-medium);
         }
 
         &.size-small
         {
-            font-size: var(--font-size-small);
+            font-size: var(--size-small);
         }
     }
 }

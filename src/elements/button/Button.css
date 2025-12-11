@@ -1,23 +1,23 @@
-.ds
+.mtds
 {
     .button
     {
-        --margin: 0em;
-
-        --padding-small: 0.2em 2.2em;
-        --padding-medium: 0.5em 2.2em;
-        --padding-large: 0.9em 2.2em;
+        --margin: 0;
 
         --border-radius: 2em;
         --border-style: solid;
         --border-color: var(--color-border);
         --border-width: var(--width-border);
 
-        --primary-background-color: var(--color-primary-action-background);
-        --primary-foreground-color: var(--color-primary-action-foreground);
-        --secondary-background-color: var(--color-secondary-action-background);
-        --secondary-foreground-color: var(--color-secondary-action-foreground);
-        --disabled-background-color: transparent;
+        --size-small: 0.2em 2.2em;
+        --size-medium: 0.5em 2.2em;
+        --size-large: 0.9em 2.2em;
+
+        --type-primary-background-color: var(--color-primary-action-background);
+        --type-primary-foreground-color: var(--color-primary-action-foreground);
+        --type-secondary-background-color: var(--color-secondary-action-background);
+        --type-secondary-foreground-color: var(--color-secondary-action-foreground);
+        --type-disabled-background-color: transparent;
 
         border-radius: var(--border-radius);
         border: 0;
@@ -32,24 +32,24 @@
 
         &.size-small
         {
-            padding: var(--padding-small);
+            padding: var(--size-small);
         }
 
         &.size-medium
         {
-            padding: var(--padding-medium);
+            padding: var(--size-medium);
         }
 
         &.size-large
         {
-            padding: var(--padding-large);
+            padding: var(--size-large);
         }
 
         &.type-primary,
         &.type-submit
         {
-            background-color: var(--primary-background-color);
-            color: var(--primary-foreground-color);
+            background-color: var(--type-primary-background-color);
+            color: var(--type-primary-foreground-color);
 
             font-weight: var(--font-weight-bold);
         }
@@ -57,35 +57,35 @@
         &.type-primary:hover,
         &.type-submit:hover
         {
-            background-color: color-mix(in srgb, black 10%, var(--primary-background-color));
+            background-color: color-mix(in srgb, black 10%, var(--type-primary-background-color));
         }
 
         &.type-primary:focus
         {
-            background-color: color-mix(in srgb, black 20%, var(--primary-background-color));
+            background-color: color-mix(in srgb, black 20%, var(--type-primary-background-color));
         }
 
         &.type-secondary
         {
-            background-color: var(--secondary-background-color);
-            color: var(--secondary-foreground-color);
+            background-color: var(--type-secondary-background-color);
+            color: var(--type-secondary-foreground-color);
 
             font-weight: var(--font-weight-normal);
         }
 
         &.type-secondary:hover
         {
-            background-color: color-mix(in srgb, black 10%, var(--secondary-background-color));
+            background-color: color-mix(in srgb, black 10%, var(--type-secondary-background-color));
         }
 
         &.type-secondary:focus
         {
-            background-color: color-mix(in srgb, black 20%, var(--secondary-background-color));
+            background-color: color-mix(in srgb, black 20%, var(--type-secondary-background-color));
         }
 
         &.type-disabled
         {
-            background-color: var(--disabled-background-color);
+            background-color: var(--type-disabled-background-color);
 
             border-color: var(--border-color);
             border-style: var(--border-style);

@@ -1,4 +1,4 @@
-.ds
+.mtds
 {
     .panel
     {
@@ -9,20 +9,20 @@
         --padding-medium: 1.5em;
         --padding-small: 1em;
 
-        --alert-background-color: var(--color-alert-background);
-        --alert-foreground-color: var(--color-alert-foreground);
+        --type-alert-background-color: var(--color-alert-background);
+        --type-alert-foreground-color: var(--color-alert-foreground);
 
-        --error-background-color: var(--color-error-background);
-        --error-foreground-color: var(--color-error-foreground);
+        --type-error-background-color: var(--color-error-background);
+        --type-error-foreground-color: var(--color-error-foreground);
 
-        --normal-background-color: var(--color-secondary-background);
-        --normal-foreground-color: var(--color-primary-foreground);
+        --type-normal-background-color: var(--color-secondary-background);
+        --type-normal-foreground-color: var(--color-primary-foreground);
 
-        --success-background-color: var(--color-success-background);
-        --success-foreground-color: var(--color-success-foreground);
+        --type-success-background-color: var(--color-success-background);
+        --type-success-foreground-color: var(--color-success-foreground);
 
-        --warning-background-color: var(--color-warning-background);
-        --warning-foreground-color: var(--color-warning-foreground);
+        --type-warning-background-color: var(--color-warning-background);
+        --type-warning-foreground-color: var(--color-warning-foreground);
 
         border-radius: var(--border-radius);
         padding: var(--padding);
@@ -31,32 +31,32 @@
 
         &.type-alert
         {
-            background-color: var(--alert-background-color);
-            color: var(--alert-foreground-color);
+            background-color: var(--type-alert-background-color);
+            color: var(--type-alert-foreground-color);
         }
 
         &.type-error
         {
-            background-color: var(--error-background-color);
-            color: var(--error-foreground-color);
+            background-color: var(--type-error-background-color);
+            color: var(--type-error-foreground-color);
         }
 
         &.type-normal
         {
-            background-color: var(--normal-background-color);
-            color: var(--normal-foreground-color);
+            background-color: var(--type-normal-background-color);
+            color: var(--type-normal-foreground-color);
         }
 
         &.type-success
         {
-            background-color: var(--success-background-color);
-            color: var(--success-foreground-color);
+            background-color: var(--type-success-background-color);
+            color: var(--type-success-foreground-color);
         }
 
         &.type-warning
         {
-            background-color: var(--warning-background-color);
-            color: var(--warning-foreground-color);
+            background-color: var(--type-warning-background-color);
+            color: var(--type-warning-foreground-color);
         }
 
         &.type-transparent

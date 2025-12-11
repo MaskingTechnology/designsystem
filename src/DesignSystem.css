@@ -1,4 +1,4 @@
-.ds
+.mtds
 {
     --font-family: sans-serif;
     --font-size: 16px;
@@ -54,12 +54,12 @@
     font-weight: var(--font-weight-light);
 }
 
-.ds *
+.mtds *
 {
     box-sizing: border-box;
 }
 
-.ds *:is(:last-child)
+.mtds *:is(:last-child)
 {
     margin-bottom: 0;
 }

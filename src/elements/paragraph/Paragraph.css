@@ -1,13 +1,13 @@
-.ds
+.mtds
 {
     .paragraph
     {
         --margin: var(--margin-container);
         --line-height: 1.5em;
 
-        --font-size-large: 1.5em;
-        --font-size-medium: 1em;
-        --font-size-small: 0.75em;
+        --size-large: 1.5em;
+        --size-medium: 1em;
+        --size-small: 0.75em;
 
         margin: var(--margin);
         line-height: var(--line-height);
@@ -15,17 +15,17 @@
 
         &.size-large
         {
-            font-size: var(--font-size-large);
+            font-size: var(--size-large);
         }
 
         &.size-medium
         {
-            font-size: var(--font-size-medium);
+            font-size: var(--size-medium);
         }
 
         &.size-small
         {
-            font-size: var(--font-size-small);
+            font-size: var(--size-small);
         }
     }
 }
