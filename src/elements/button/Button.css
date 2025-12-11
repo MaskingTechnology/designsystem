@@ -68,9 +68,9 @@
         &.type-secondary
         {
             background-color: var(--type-secondary-background-color);
-            color: var(--secondary-foreground-color);
+            color: var(--type-secondary-foreground-color);
 
-            font-weight: var(--type-font-weight-normal);
+            font-weight: var(--font-weight-normal);
         }
 
         &.type-secondary:hover

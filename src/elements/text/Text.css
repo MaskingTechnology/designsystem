@@ -28,12 +28,12 @@
 
         &.size-medium
         {
-            font-size: var(--size-medium)
+            font-size: var(--size-medium);
         }
 
         &.size-large
         {
-            font-size: var(--size-large)
+            font-size: var(--size-large);
         }
 
         &.weight-light

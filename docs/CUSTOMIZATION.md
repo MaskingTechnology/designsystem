@@ -24,7 +24,7 @@ All global options can be found below. Specific selectors and options can be fou
 
 ## Activation
 
-Customizations must be loaded after loading the design systeem style.
+Customizations must be loaded after loading the design system style.
 
 ```tsx
 import '@maskingtech/designsystem/style.css';
@@ -55,7 +55,7 @@ import '/path/to/customizations.css';
 - `--color-secondary-background` (default: `#f3f3f3`)
 - `--color-secondary-foreground` (default: `#666666`)
 - `--color-primary-action-background` (default: `#cccccc`)
-- `-color-primary-action-foreground` (default: `#000000`)
+- `--color-primary-action-foreground` (default: `#000000`)
 - `--color-secondary-action-background` (default: `#f3f3f3`)
 - `--color-secondary-action-foreground` (default: `#000000`)
 - `--color-input-background` (default: `#ffffff`)
@@ -64,7 +64,7 @@ import '/path/to/customizations.css';
 - `--color-alert-foreground` (default: `#666666`)
 - `--color-error-background` (default: `#666666`)
 - `--color-error-foreground` (default: `#f3f3f3`)
-- `-color-warning-background` (default: `#999999`)
+- `--color-warning-background` (default: `#999999`)
 - `--color-warning-foreground` (default: `#f3f3f3`)
 - `--color-success-background` (default: `#efefef`)
 - `--color-success-foreground` (default: `#666666`)

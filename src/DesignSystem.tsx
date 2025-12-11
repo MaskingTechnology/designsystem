@@ -7,7 +7,7 @@ type Props = {
     readonly children?: ReactNode;
 };
 
-export default function Container({ children }: Props)
+export default function DesignSystem({ children }: Props)
 {
     return <div className='mtds'>{ children }</div>
 }

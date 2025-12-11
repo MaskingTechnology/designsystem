@@ -6,7 +6,7 @@ The following elements are available:
 * **Layout:** `Grid`, `Column`, `Row`, `Cell`
 * **Text:** `Title`, `Paragraph`, `Text`
 * **Interaction:** `Button`, `Clickarea`, `Link`
-* **Form:** `Form`, `Input`, `Label`, `Select`, `Textarea`, `Textbox`
+* **Form:** `Form`, `Input`, `Label`, `Select`, `TextArea`, `TextBox`
 * **Graphic:** `Avatar`, `Icon`, `Image`
 * **Other:** `Ruler`, `Spinner`
 
@@ -102,7 +102,7 @@ import { Modal } from '@maskingtech/designsystem';
 </Modal>
 ```
 
-This elements does not have customization options.
+This element does not have customization options.
 
 ## Layout elements
 
@@ -209,7 +209,7 @@ import { Cell } from '@maskingtech/designsystem';
 <Cell sizing='fixed'>Fixed content</Cell>
 ```
 
-This elements does not have customization options.
+This element does not have customization options.
 
 ## Text elements
 
@@ -286,9 +286,9 @@ Customization options (selector: `.text`):
 
 - `--primary-color` (default: `var(--color-primary-foreground)`)
 - `--secondary-color` (default: `var(--color-secondary-foreground)`)
-- `--size-large` (default: `var(1.2em)`)
-- `--size-medium` (default: `var(1.0em)`)
-- `--size-small` (default: `var(0.9em)`)
+- `--size-large` (default: `1.2em`)
+- `--size-medium` (default: `1.0em`)
+- `--size-small` (default: `0.9em`)
 - weights are defined at global level.
 
 ## Interaction elements
@@ -402,7 +402,7 @@ import { Form } from '@maskingtech/designsystem';
 </Form>
 ```
 
-This elements does not have customization options.
+This element does not have customization options.
 
 ### Input
 
@@ -572,7 +572,7 @@ import { Avatar } from '@maskingtech/designsystem';
 />
 ```
 
-This elements does not have customization options.
+This element does not have customization options.
 
 ### Icon
 
@@ -596,7 +596,7 @@ import { Icon } from '@maskingtech/designsystem';
 <Icon type='search' />
 ```
 
-This elements does not have customization options.
+This element does not have customization options.
 
 ### Image
 
@@ -619,7 +619,7 @@ import { Image } from '@maskingtech/designsystem';
 <Image source='http://example.com/photo.jpg' alt='Example' width='200px' fit='cover' />
 ```
 
-This elements does not have customization options.
+This element does not have customization options.
 
 ## Other elements
 
@@ -664,8 +664,6 @@ import { Spinner } from '@maskingtech/designsystem';
 ```
 
 Customization options (selector: `.spinner`):
-
-- `--spinner-size` (default: `2.0em`)
 
 - `--color` (default: `var(--color-border)`)
 - `--size` (default: `2em`)
