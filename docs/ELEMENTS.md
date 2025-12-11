@@ -522,6 +522,7 @@ Properties:
 - **limit** - number (optional)
 - **pattern** - string (optional)
 - **title** - string (optional)
+- **type** - `email` | `number` | `password` | `search` | `text` | `tel` | `url` (optional, default `text`)
 - **size** - `large` | `medium` | `small` (optional, default `medium`)
 - **required** - boolean (optional)
 - **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)

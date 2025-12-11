@@ -9,6 +9,7 @@ export { default as Button } from './elements/button/Button';
 export { default as Cell } from './elements/cell/Cell';
 export { default as ClickArea } from './elements/clickarea/ClickArea';
 export { default as Column } from './elements/column/Column';
+export { default as DateTime } from './elements/datetime/DateTime';
 export { default as Form } from './elements/form/Form';
 export { default as Grid } from './elements/grid/Grid';
 export { default as Icon } from './elements/icon/Icon';

@@ -11,6 +11,7 @@ export type Props = {
     readonly limit?: number;
     readonly pattern?: string;
     readonly title?: string;
+    readonly type?: 'email' | 'number' | 'password' | 'search' | 'text' | 'tel' | 'url';
     readonly size?: 'large' | 'medium' | 'small';
     readonly required?: boolean;
     readonly onChange?: ChangeEventHandler<HTMLInputElement>;
@@ -18,14 +19,14 @@ export type Props = {
 
 type Ref = HTMLInputElement;
 
-export default forwardRef<Ref, Props>(function Element({ name, placeholder, value, limit, pattern, title, size = 'medium', required, onChange }, ref)
+export default forwardRef<Ref, Props>(function Element({ name, placeholder, value, limit, pattern, title, type = 'text', size = 'medium', required, onChange }, ref)
 {
     const className = 'textbox'
         + ' size-' + size;
 
     return <input
         className={className}
-        type='text'
+        type={type}
         name={name}
         placeholder={placeholder}
         defaultValue={value}
