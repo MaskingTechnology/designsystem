@@ -2,9 +2,7 @@
 {
     .form
     {
-        --margin: var(--margin-container);
-
-        margin: var(--margin);
+        margin: 0;
         min-width: 0;
     }
 }
