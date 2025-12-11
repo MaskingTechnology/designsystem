@@ -33,6 +33,7 @@
         --icon-mail: '\2709';
         --icon-music: '\266B';
 
+        --icon-pencil: '\270E';
         --icon-phone: '\260E';
         --icon-piece: '\262E';
         --icon-plus: '\2795';
@@ -163,6 +164,11 @@
         &.music:before
         {
             content: var(--icon-music);
+        }
+
+        &.pencil:before
+        {
+            content: var(--icon-pencil);
         }
 
         &.phone:before
