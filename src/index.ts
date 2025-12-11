@@ -24,6 +24,7 @@ export { default as Row } from './elements/row/Row';
 export { default as Ruler } from './elements/ruler/Ruler';
 export { default as Select } from './elements/select/Select';
 export { default as Spinner } from './elements/spinner/Spinner';
+export { default as Table } from './elements/table/Table';
 export { default as Text } from './elements/text/Text';
 export { default as TextArea } from './elements/textarea/TextArea';
 export { default as TextBox } from './elements/textbox/TextBox';

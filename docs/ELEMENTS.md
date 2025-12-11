@@ -211,6 +211,83 @@ import { Cell } from '@maskingtech/designsystem';
 
 This element does not have customization options.
 
+### Table
+
+A table layout with a head, body and footer containing rows and cells.
+
+`Table` properties:
+
+- **padding** - `large` | `medium` | `small` (optional, default `medium`)
+- **children** - `ReactElement<Table.Header | Table.Body | Table.Footer>` (required)
+
+`Table.Header` properties:
+
+- **children** - `ReactElement<Table.Row>` (required)
+
+`Table.Body` properties:
+
+- **children** - `ReactElement<Table.Row>` (required)
+
+`Table.Footer` properties:
+
+- **border** - `large` | `medium` | `small` | `name` (optional, default `medium`)
+- **children** - `ReactElement<Table.Row>` (required)
+
+`Table.Row` properties:
+
+- **children** - `ReactElement<Table.Cell>` (required)
+
+`Table.Cell` properties:
+
+- **colspan** - number (optional)
+- **rowspan** - number (optional)
+- **alignX** - `left` | `center` | `right` (optional, default `left`)
+- **alignY** - `top` | `center` | `bottom` (optional, default `center`)
+- **size** - `95` | `90` | `85` | `80` | `75` | `70` | `65` | `60` | `55` | `50` | `45` | `40` | `35` | `30` | `25` | `20` | `15` | `10` | `5` % (optional, default `fluid`)
+- **children** - ReactNode
+
+Example:
+
+```tsx
+import { Table } from '@maskingtech/designsystem';
+
+<Table>
+  <Table.Header>
+    <Table.Row>
+      <Table.Cell size='30'>Month</Table.Cell>
+      <Table.Cell size='70'>Amount</Table.Cell>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell alignX='left'>January</Table.Cell>
+      <Table.Cell alignX='right'>200</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+  <Table.Footer>
+    <Table.Row>
+      <Table.Cell colspan='2'>Total: 200</Table.Cell>
+    </Table.Row>
+  </Table.Footer>
+</Table>
+```
+
+Customization options (selector: `.table`):
+
+- `--margin` (default: `0 0 1.5em 0`)
+- `--padding-large` (default: `1em`)
+- `--padding-medium` (default: `0.7em`)
+- `--padding-small` (default: `0.4em`)
+- `--header-background-color` (default: `var(--color-border);`)
+- `--header-forground-color` (default: `var(--color-primary-foreground)`)
+- `--row-odd-color` (default: `var(--color-primary-background)`)
+- `--row-even-color` (default: `var(--color-secondary-background)`)
+- `--footer-border-small` (default: `0.1rem`)
+- `--footer-border-medium` (default: `0.2rem`)
+- `--footer-border-large` (default: `0.3rem`)
+- `--footer-border-color` (default: `var(--color-border)`)
+- `--footer-forground-color` (default: `var(--color-primary-foreground)`)
+
 ## Text elements
 
 ### Title
@@ -410,8 +487,8 @@ A labeled input wrapper that composes `Label` with an input element (`TextBox`, 
 
 Properties:
 
-- **label** - `ReactElement<LabelProps>` (required)
-- **element** - `ReactElement<TextBoxProps | TextAreaProps | SelectProps>` (required)
+- **label** - `ReactElement<Label>` (required)
+- **element** - `ReactElement<TextBox | TextArea | Select>` (required)
 
 Example:
 
