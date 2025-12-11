@@ -6,7 +6,7 @@ The following elements are available:
 * **Layout:** `Grid`, `Column`, `Row`, `Cell`
 * **Text:** `Title`, `Paragraph`, `Text`
 * **Interaction:** `Button`, `Clickarea`, `Link`
-* **Form:** `Form`, `Input`, `Label`, `Select`, `TextArea`, `TextBox`
+* **Form:** `Form`, `Input`, `Label`, `DateTime`, `Select`, `TextArea`, `TextBox`
 * **Graphic:** `Avatar`, `Icon`, `Image`
 * **Other:** `Ruler`, `Spinner`
 
@@ -445,6 +445,38 @@ import { Label } from '@maskingtech/designsystem';
 Customization options (selector: `.label`):
 
 - `--margin` (default: `0`)
+
+### DateTime
+
+A date and time input.
+
+Properties:
+
+- **name** - string (required)
+- **value** - string (optional)
+- **title** - string (optional)
+- **type** - `datetime` | `date` | `time` | `month` | `week` (optional, default `datetime`)
+- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **required** - boolean (optional)
+- **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)
+
+Example:
+
+```tsx
+import { TextBox } from '@maskingtech/designsystem';
+
+<TextBox name='firstName' placeholder='First name' />
+```
+
+Customization options (selector: `.datetime`):
+
+- `--margin` (default: `0`)
+- `--size-small` (default: `0.4em`)
+- `--size-medium` (default: `0.8em`)
+- `--size-large` (default: `1.2em`)
+- `--border-style` (default: `solid`)
+- `--border-color` (default: `var(--color-border)`)
+- `--border-width` (default: `var(--width-border)`)
 
 ### Select
 
