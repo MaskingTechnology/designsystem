@@ -28,6 +28,7 @@ export { default as TextBox } from './elements/textbox/TextBox';
 export { default as Title } from './elements/title/Title';
 
 export { default as Dropdown } from './components/dropdown/Dropdown';
+export { default as ModalManager } from './components/modals/ModalManager';
 export { default as Tabs } from './components/tabs/Tabs';
 
 export { default as DesignSystem } from './DesignSystem';

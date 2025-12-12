@@ -88,7 +88,8 @@ A modal dialog built on the native `<dialog>` element.
 
 Properties:
 
-- **open** - boolean (required)
+- **id** - string | undefined (optional, default `undefined`)
+- **open** - boolean (optional, default `true`)
 - **sizing** - `full` | `content` (optional, default `content`)
 - **children** - ReactNode (optional)
 

@@ -9,7 +9,7 @@ export type Props = {
 
 export default function Component({ children }: Props)
 {
-    return <div className='ds-tabs-tab'>
+    return <div className='tab'>
         {children}
     </div>;
 }

@@ -4,13 +4,14 @@ import { useEffect, useRef } from 'react';
 
 import './Modal.css';
 
-type Props = {
-    readonly open: boolean,
+export type Props = {
+    readonly id?: string;
+    readonly open?: boolean,
     readonly sizing?: 'full' | 'content';
     readonly children?: ReactNode;
 };
 
-export default function Element({ open, sizing = 'content', children }: Props)
+export default function Element({ open = true, sizing = 'content', children }: Props)
 {
     const ref = useRef<HTMLDialogElement>(null);
 
@@ -26,8 +27,6 @@ export default function Element({ open, sizing = 'content', children }: Props)
     }, [open]);
 
     return <dialog ref={ref} className={className}>
-        <form method='dialog'>
-            {children}
-        </form>
+        {children}
     </dialog>;
 }
