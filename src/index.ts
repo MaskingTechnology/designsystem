@@ -1,7 +1,6 @@
 
 export { default as DesignSystem } from './DesignSystem';
 export { default as Dropdown } from './components/dropdown/Dropdown';
-export { default as Tab } from './components/tabs/Tab';
 export { default as Tabs } from './components/tabs/Tabs';
 export { default as Avatar } from './elements/avatar/Avatar';
 export { default as Border } from './elements/border/Border';

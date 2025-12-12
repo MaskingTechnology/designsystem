@@ -45,7 +45,7 @@ Tabs provide a tabbed navigation. Use `Tab` elements as children of `Tabs`.
 - **children** - one or more `Tab` elements (required)
 - **onChange** - `(newId: string, oldId?: string) => void` (optional)
 
-`Tab` Properties:
+`Tabs.Tab` Properties:
 
 - **id** - string (required)
 - **title** - ReactNode (required)
@@ -54,11 +54,11 @@ Tabs provide a tabbed navigation. Use `Tab` elements as children of `Tabs`.
 Example:
 
 ```tsx
-import { Tabs, Tab } from '@maskingtech/designsystem';
+import { Tabs } from '@maskingtech/designsystem';
 
 <Tabs selectedId='tab1' onChange={(n,o)=>console.log(n,o)}>
-  <Tab id='tab1' title='First'>First content</Tab>
-  <Tab id='tab2' title='Second'>Second content</Tab>
+  <Tabs.Tab id='tab1' title='First'>First content</Tabs.Tab>
+  <Tabs.Tab id='tab2' title='Second'>Second content</Tabs.Tab>
 </Tabs>
 ```
 
