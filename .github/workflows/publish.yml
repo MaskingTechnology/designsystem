@@ -1,0 +1,39 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⚙️ Checkout Repository
+        uses: actions/checkout@v6
+      
+      - name: 🛠️ Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24.x'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🚀 Publish Package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: 🏷️ Create and Push Git Tag
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag "v$VERSION"
+          git push origin "v$VERSION"
+
+      - name: ✅ Publish Complete
+        run: echo "Package published and tagged successfully."
