@@ -6,7 +6,7 @@ The following elements are available:
 * **Layout:** `Grid`, `Column`, `Row`, `Cell`
 * **Text:** `Title`, `Paragraph`, `Text`
 * **Interaction:** `Button`, `Clickarea`, `Link`
-* **Form:** `Form`, `Input`, `Label`, `DateTime`, `Select`, `TextArea`, `TextBox`
+* **Form:** `Form`, `Input`, `Label`, `DateTime`, `Select`, `TextArea`, `TextBox`, `CheckBox`
 * **Graphic:** `Avatar`, `Icon`, `Image`
 * **Other:** `Ruler`, `Spinner`
 
@@ -652,6 +652,28 @@ Customization options (selector: `.textbox`):
 - `--border-style` (default: `solid`)
 - `--border-color` (default: `var(--color-border)`)
 - `--border-width` (default: `var(--width-border)`)
+
+### CheckBox
+
+A check box input with a label.
+
+Properties:
+
+- **name** - string (required)
+- **label** - string (required)
+- **checked** - boolean (optional, default `false`)
+- **required** - boolean (optional)
+- **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)
+
+Example:
+
+```tsx
+import { CheckBox } from '@maskingtech/designsystem';
+
+<CheckBox name='enabled' label='Option enabled' />
+```
+
+This element does not have customization options.
 
 ## Graphic elements
 

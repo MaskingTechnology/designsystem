@@ -1,10 +1,13 @@
 
 export { default as DesignSystem } from './DesignSystem';
+
 export { default as Dropdown } from './components/dropdown/Dropdown';
 export { default as Tabs } from './components/tabs/Tabs';
+
 export { default as Avatar } from './elements/avatar/Avatar';
 export { default as Border } from './elements/border/Border';
 export { default as Button } from './elements/button/Button';
+export { default as CheckBox } from './elements/checkbox/CheckBox';
 export { default as Cell } from './elements/cell/Cell';
 export { default as ClickArea } from './elements/clickarea/ClickArea';
 export { default as Column } from './elements/column/Column';
