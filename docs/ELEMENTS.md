@@ -226,11 +226,11 @@ A table layout with a head, body and footer containing rows and cells.
 
 `Table.Body` properties:
 
+- **border** - `large` | `medium` | `small` | `name` (optional, default `medium`)
 - **children** - `ReactElement<Table.Row>` (required)
 
 `Table.Footer` properties:
 
-- **border** - `large` | `medium` | `small` | `name` (optional, default `medium`)
 - **children** - `ReactElement<Table.Row>` (required)
 
 `Table.Row` properties:
@@ -274,7 +274,6 @@ import { Table } from '@maskingtech/designsystem';
 
 Customization options (selector: `.table`):
 
-- `--margin` (default: `0 0 1.5em 0`)
 - `--padding-large` (default: `1em`)
 - `--padding-medium` (default: `0.7em`)
 - `--padding-small` (default: `0.4em`)

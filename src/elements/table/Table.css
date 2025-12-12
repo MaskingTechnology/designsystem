@@ -2,8 +2,6 @@
 {
     .table
     {
-        --margin: 0 0 1.5em 0;
-
         --padding-large: 1em;
         --padding-medium: 0.7em;
         --padding-small: 0.4em;
@@ -22,7 +20,7 @@
         --footer-forground-color: var(--color-primary-foreground);
 
         border-collapse: collapse;
-        margin: var(--margin);
+        margin: 0;
         
         thead
         {
@@ -46,44 +44,32 @@
                     background-color: var(--row-even-color);
                 }
             }
+
+            &.border-none
+            {
+                border-bottom: 0;
+            }
+
+            &.border-small
+            {
+                border-bottom: var(--footer-border-small) solid var(--footer-border-color);
+            }
+
+            &.border-medium
+            {
+                border-bottom: var(--footer-border-medium) solid var(--footer-border-color);
+            }
+
+            &.border-large
+            {
+                border-bottom: var(--footer-border-large) solid var(--footer-border-color);
+            }
         }
 
         tfoot
         {
             color: var(--footer-forground-color);
             font-weight: bold;
-
-            &.border-none
-            {
-                td
-                {
-                    border-top: 0;
-                }
-            }
-
-            &.border-small
-            {
-                td
-                {
-                    border-top: var(--footer-border-small) solid var(--footer-border-color);
-                }
-            }
-
-            &.border-medium
-            {
-                td
-                {
-                    border-top: var(--footer-border-medium) solid var(--footer-border-color);
-                }
-            }
-
-            &.border-large
-            {
-                td
-                {
-                    border-top: var(--footer-border-large) solid var(--footer-border-color);
-                }
-            }
         }
 
         td
