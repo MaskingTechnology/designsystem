@@ -52,14 +52,14 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-weight: var(--font-weight-light);
-}
 
-.mtds *
-{
-    box-sizing: border-box;
-}
+    *
+    {
+        box-sizing: border-box;
 
-.mtds *:is(:last-child)
-{
-    margin-bottom: 0;
+        &:is(:last-child)
+        {
+            margin-bottom: 0;
+        }
+    }
 }
