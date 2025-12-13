@@ -14,7 +14,7 @@ export type Props = {
 
 type Ref = HTMLInputElement;
 
-export default forwardRef<Ref, Props>(function Element({ name, label, checked = false, required, onChange }, ref)
+export const CheckBox = forwardRef<Ref, Props>(function Element({ name, label, checked = false, required, onChange }, ref)
 {
     const className = 'checkbox';
 

@@ -10,7 +10,7 @@ type Props = {
     readonly fit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
 };
 
-export default function Element({ source, title, alt = 'Avatar', width, height, fit = 'contain' }: Props)
+export function Avatar({ source, title, alt = 'Avatar', width, height, fit = 'contain' }: Props)
 {
     const className = 'avatar'
         + ' fit-' + fit;

@@ -16,7 +16,7 @@ export type Props = {
 
 type Ref = HTMLTextAreaElement;
 
-export default forwardRef<Ref, Props>(function Element({ name, placeholder, value, size = 'medium', rows, limit, onChange }, ref)
+export const TextArea = forwardRef<Ref, Props>(function Element({ name, placeholder, value, size = 'medium', rows, limit, onChange }, ref)
 {
     const className = 'textarea'
         + ' size-' + size;

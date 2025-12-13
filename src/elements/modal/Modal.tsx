@@ -11,7 +11,7 @@ export type Props = {
     readonly children?: ReactNode;
 };
 
-export default function Element({ open = true, sizing = 'content', children }: Props)
+export function Modal({ open = true, sizing = 'content', children }: Props)
 {
     const ref = useRef<HTMLDialogElement>(null);
 

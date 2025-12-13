@@ -13,7 +13,7 @@ type Props = {
     readonly element: ReactElement<TextBoxProps> | ReactElement<TextAreaProps> | ReactElement<SelectProps>;
 };
 
-export default function Element({ label, element }: Props) 
+export function Input({ label, element }: Props) 
 {
     return (
         <div className="input">

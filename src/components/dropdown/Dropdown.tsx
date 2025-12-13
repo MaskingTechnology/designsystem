@@ -10,7 +10,7 @@ type Props = {
     readonly onChange?: (oldKey: string, newKey: string) => void;
 };
 
-export default function Component({ options, selected, onChange }: Props)
+export function Dropdown({ options, selected, onChange }: Props)
 {
     const defaultKey = selected ?? [...options.keys()][0];
     const defaultText = options.get(defaultKey) ?? '';

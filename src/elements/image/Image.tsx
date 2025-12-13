@@ -10,7 +10,7 @@ type Props = {
     readonly fit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
 };
 
-export default function Element({ source, title, alt, width, height, fit = 'contain' }: Props)
+export function Image({ source, title, alt, width, height, fit = 'contain' }: Props)
 {
     const className = 'image'
         + ' fit-' + fit;

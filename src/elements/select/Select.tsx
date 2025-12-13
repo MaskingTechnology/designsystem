@@ -14,7 +14,7 @@ export type Props = {
 
 type Ref = HTMLSelectElement;
 
-export default forwardRef<Ref, Props>(function Element({ name, options, value, size = 'medium', onChange }, ref)
+export const Select = forwardRef<Ref, Props>(function Element({ name, options, value, size = 'medium', onChange }, ref)
 {
     const className = 'select'
         + ' size-' + size;

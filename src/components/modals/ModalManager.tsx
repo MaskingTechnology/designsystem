@@ -9,7 +9,7 @@ type Props = {
     readonly children: ReactElement<ModalProps> | ReactElement<ModalProps>[];
 };
 
-export default function Component({ selectedId, children}: Props)
+export function ModalManager({ selectedId, children}: Props)
 {
     const [selected, setSelected] = useState<string>(selectedId ?? '');
 

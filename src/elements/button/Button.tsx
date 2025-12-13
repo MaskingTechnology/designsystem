@@ -8,7 +8,7 @@ type Props = {
     readonly onClick?: () => void;
 };
 
-export default function Element({ type = 'primary', size = 'medium', text, onClick }: Props)
+export function Button({ type = 'primary', size = 'medium', text, onClick }: Props)
 {
     const className = 'button'
         + ' type-' + type

@@ -18,7 +18,7 @@ type Props = {
     readonly children?: ReactElement<HeaderProps> | ReactElement<BodyProps> | ReactElement<FooterProps>[];
 };
 
-export default function Element({ padding = 'medium', children }: Props)
+export function Table({ padding = 'medium', children }: Props)
 {
     const className = 'table'
         + ' padding-' + padding;
@@ -28,8 +28,8 @@ export default function Element({ padding = 'medium', children }: Props)
     </table>;
 }
 
-Element.Header = Header;
-Element.Body = Body;
-Element.Footer = Footer;
-Element.Row = Row;
-Element.Cell = Cell;
+Table.Header = Header;
+Table.Body = Body;
+Table.Footer = Footer;
+Table.Row = Row;
+Table.Cell = Cell;

@@ -7,7 +7,7 @@ type Props = {
     | 'recycle' | 'search' | 'settings' | 'star' | 'sun' | 'tag' | 'trash' | 'umbrella' | 'unlock' | 'user' | 'video' | 'warning' | 'yinyang';
 };
 
-export default function Element({ type }: Props)
+export function Icon({ type }: Props)
 {
     return <span className={'icon ' + type} />;
 }

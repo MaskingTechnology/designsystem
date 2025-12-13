@@ -9,7 +9,7 @@ type Props = {
     readonly wrap?: 'none' | 'normal' | 'break-word';
 };
 
-export default function Element({ value, type = 'primary', size = 'medium', weight = 'normal', wrap = 'none' }: Props)
+export function Text({ value, type = 'primary', size = 'medium', weight = 'normal', wrap = 'none' }: Props)
 {
     const className = 'text'
         + ' type-' + type

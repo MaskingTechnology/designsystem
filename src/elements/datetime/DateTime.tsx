@@ -16,7 +16,7 @@ export type Props = {
 
 type Ref = HTMLInputElement;
 
-export default forwardRef<Ref, Props>(function Element({ name, value, title, type = 'datetime', size = 'medium', required, onChange }, ref)
+export const DateTime = forwardRef<Ref, Props>(function Element({ name, value, title, type = 'datetime', size = 'medium', required, onChange }, ref)
 {
     const className = 'datetime'
         + ' size-' + size;

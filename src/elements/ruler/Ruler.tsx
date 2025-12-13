@@ -6,7 +6,7 @@ type Props = {
     readonly size?: 'small' | 'medium' | 'large';
 };
 
-export default function Element({ direction, size = 'medium' }: Props)
+export function Ruler({ direction, size = 'medium' }: Props)
 {
     const className = 'ruler'
         + ' direction-' + direction

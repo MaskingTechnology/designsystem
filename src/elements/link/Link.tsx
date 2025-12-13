@@ -9,7 +9,7 @@ type Props = {
     readonly children: ReactNode;
 };
 
-export default function Element({ url, target, children }: Props)
+export function Link({ url, target, children }: Props)
 {
     return <a className="link" href={url} target={target}>
         {children}

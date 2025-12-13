@@ -7,7 +7,7 @@ export type Props = {
     readonly children: ReactNode;
 };
 
-export default function Component({ children }: Props)
+export default function Tab({ children }: Props)
 {
     return <div className='tab'>
         {children}

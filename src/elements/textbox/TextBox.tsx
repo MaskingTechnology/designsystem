@@ -19,7 +19,7 @@ export type Props = {
 
 type Ref = HTMLInputElement;
 
-export default forwardRef<Ref, Props>(function Element({ name, placeholder, value, limit, pattern, title, type = 'text', size = 'medium', required, onChange }, ref)
+export const TextBox = forwardRef<Ref, Props>(function Element({ name, placeholder, value, limit, pattern, title, type = 'text', size = 'medium', required, onChange }, ref)
 {
     const className = 'textbox'
         + ' size-' + size;
