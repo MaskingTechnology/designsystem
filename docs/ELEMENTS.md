@@ -563,6 +563,7 @@ Properties:
 
 - **name** - string (required)
 - **options** - `Map<string, string>` (required)
+- **defaultValue** - string (optional)
 - **value** - string (optional)
 - **size** - `large` | `medium` | `small` (optional, default `medium`)
 - **onChange** - `ChangeEventHandler<HTMLSelectElement>` (optional)
@@ -574,7 +575,7 @@ import { Select } from '@maskingtech/designsystem';
 
 const options = new Map([['a', 'Option A'], ['b', 'Option B']]);
 
-<Select name='example' options={options} />
+<Select name='example' options={options} defaultValue='a' />
 ```
 
 Customization options (selector: `.select`):
