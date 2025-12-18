@@ -7,6 +7,7 @@ import './TextArea.css';
 export type Props = {
     readonly name: string;
     readonly placeholder?: string;
+    readonly defaultValue?: string;
     readonly value?: string;
     readonly size?: 'large' | 'medium' | 'small';
     readonly rows?: number;
@@ -16,7 +17,7 @@ export type Props = {
 
 type Ref = HTMLTextAreaElement;
 
-export const TextArea = forwardRef<Ref, Props>(function Element({ name, placeholder, value, size = 'medium', rows, limit, onChange }, ref)
+export const TextArea = forwardRef<Ref, Props>(function Element({ name, placeholder, defaultValue, value, size = 'medium', rows, limit, onChange }, ref)
 {
     const className = 'textarea'
         + ' size-' + size;
@@ -25,7 +26,8 @@ export const TextArea = forwardRef<Ref, Props>(function Element({ name, placehol
         className={className}
         name={name}
         placeholder={placeholder}
-        defaultValue={value}
+        defaultValue={defaultValue}
+        value={value}
         rows={rows}
         ref={ref}
         maxLength={limit}

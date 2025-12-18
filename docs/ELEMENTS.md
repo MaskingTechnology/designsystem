@@ -530,6 +530,7 @@ A date and time input.
 Properties:
 
 - **name** - string (required)
+- **defaultValue** - string (optional)
 - **value** - string (optional)
 - **title** - string (optional)
 - **type** - `datetime` | `date` | `time` | `month` | `week` (optional, default `datetime`)
@@ -596,6 +597,7 @@ Properties:
 
 - **name** - string (required)
 - **placeholder** - string (optional)
+- **defaultValue** - string (optional)
 - **value** - string (optional)
 - **size** - `large` | `medium` | `small` (optional, default `medium`)
 - **rows** - number (optional)
@@ -628,6 +630,7 @@ Properties:
 
 - **name** - string (required)
 - **placeholder** - string (optional)
+- **defaultValue** - string (optional)
 - **value** - string (optional)
 - **limit** - number (optional)
 - **pattern** - string (optional)
@@ -664,6 +667,7 @@ Properties:
 - **name** - string (required)
 - **label** - string (required)
 - **checked** - boolean (optional, default `false`)
+- **value** - string (optional)
 - **required** - boolean (optional)
 - **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)
 

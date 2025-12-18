@@ -6,6 +6,7 @@ import './DateTime.css';
 
 export type Props = {
     readonly name: string;
+    readonly defaultValue?: string;
     readonly value?: string;
     readonly title?: string;
     readonly type?: 'datetime' | 'date' | 'time' | 'month' | 'week';
@@ -16,7 +17,7 @@ export type Props = {
 
 type Ref = HTMLInputElement;
 
-export const DateTime = forwardRef<Ref, Props>(function Element({ name, value, title, type = 'datetime', size = 'medium', required, onChange }, ref)
+export const DateTime = forwardRef<Ref, Props>(function Element({ name, defaultValue, value, title, type = 'datetime', size = 'medium', required, onChange }, ref)
 {
     const className = 'datetime'
         + ' size-' + size;
@@ -25,7 +26,8 @@ export const DateTime = forwardRef<Ref, Props>(function Element({ name, value, t
         className={className}
         type={type}
         name={name}
-        defaultValue={value}
+        defaultValue={defaultValue}
+        value={value}
         title={title}
         ref={ref}
         required={required}

@@ -7,6 +7,7 @@ import './TextBox.css';
 export type Props = {
     readonly name: string;
     readonly placeholder?: string;
+    readonly defaultValue?: string;
     readonly value?: string;
     readonly limit?: number;
     readonly pattern?: string;
@@ -19,7 +20,7 @@ export type Props = {
 
 type Ref = HTMLInputElement;
 
-export const TextBox = forwardRef<Ref, Props>(function Element({ name, placeholder, value, limit, pattern, title, type = 'text', size = 'medium', required, onChange }, ref)
+export const TextBox = forwardRef<Ref, Props>(function Element({ name, placeholder, defaultValue, value, limit, pattern, title, type = 'text', size = 'medium', required, onChange }, ref)
 {
     const className = 'textbox'
         + ' size-' + size;
@@ -29,7 +30,8 @@ export const TextBox = forwardRef<Ref, Props>(function Element({ name, placehold
         type={type}
         name={name}
         placeholder={placeholder}
-        defaultValue={value}
+        defaultValue={defaultValue}
+        value={value}
         maxLength={limit}
         pattern={pattern}
         title={title}
