@@ -8,7 +8,7 @@ type Props = {
     readonly children: ReactNode;
 };
 
-export default function Element({ size = 'large', children }: Props)
+export function Title({ size = 'large', children }: Props)
 {
     const className = 'title'
         + ' size-' + size;

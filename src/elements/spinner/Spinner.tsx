@@ -5,7 +5,7 @@ type Props = {
     readonly active?: boolean;
 };
 
-export default function Element({ active = true }: Props)
+export function Spinner({ active = true }: Props)
 {
     const className = 'spinner'
         + (active ? ' active' : '');

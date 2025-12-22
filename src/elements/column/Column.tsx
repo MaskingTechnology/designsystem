@@ -11,7 +11,7 @@ type Props = {
     readonly children: ReactNode;
 };
 
-export default function Element({ alignX = 'left', alignY = 'top', gap = 'medium', wrap = 'nowrap', children }: Props)
+export function Column({ alignX = 'left', alignY = 'top', gap = 'medium', wrap = 'nowrap', children }: Props)
 {
     const className = 'column'
         + ' align-x-' + alignX

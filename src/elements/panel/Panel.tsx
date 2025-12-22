@@ -9,7 +9,7 @@ type Props = {
     readonly children?: ReactNode;
 };
 
-export default function Element({ type = 'normal', padding = 'large', children }: Props)
+export function Panel({ type = 'normal', padding = 'large', children }: Props)
 {
     const className = 'panel'
         + ' type-' + type

@@ -6,7 +6,7 @@ The following elements are available:
 * **Layout:** `Grid`, `Column`, `Row`, `Cell`
 * **Text:** `Title`, `Paragraph`, `Text`
 * **Interaction:** `Button`, `Clickarea`, `Link`
-* **Form:** `Form`, `Input`, `Label`, `Select`, `TextArea`, `TextBox`
+* **Form:** `Form`, `Input`, `Label`, `DateTime`, `Select`, `TextArea`, `TextBox`, `CheckBox`
 * **Graphic:** `Avatar`, `Icon`, `Image`
 * **Other:** `Ruler`, `Spinner`
 
@@ -88,7 +88,8 @@ A modal dialog built on the native `<dialog>` element.
 
 Properties:
 
-- **open** - boolean (required)
+- **id** - string | undefined (optional, default `undefined`)
+- **open** - boolean (optional, default `true`)
 - **sizing** - `full` | `content` (optional, default `content`)
 - **children** - ReactNode (optional)
 
@@ -210,6 +211,82 @@ import { Cell } from '@maskingtech/designsystem';
 ```
 
 This element does not have customization options.
+
+### Table
+
+A table layout with a head, body and footer containing rows and cells.
+
+`Table` properties:
+
+- **padding** - `large` | `medium` | `small` (optional, default `medium`)
+- **children** - `ReactElement<Table.Header | Table.Body | Table.Footer>` (required)
+
+`Table.Header` properties:
+
+- **children** - `ReactElement<Table.Row>` (required)
+
+`Table.Body` properties:
+
+- **border** - `large` | `medium` | `small` | `name` (optional, default `medium`)
+- **children** - `ReactElement<Table.Row>` (required)
+
+`Table.Footer` properties:
+
+- **children** - `ReactElement<Table.Row>` (required)
+
+`Table.Row` properties:
+
+- **children** - `ReactElement<Table.Cell>` (required)
+
+`Table.Cell` properties:
+
+- **colspan** - number (optional)
+- **rowspan** - number (optional)
+- **alignX** - `left` | `center` | `right` (optional, default `left`)
+- **alignY** - `top` | `center` | `bottom` (optional, default `center`)
+- **size** - `95` | `90` | `85` | `80` | `75` | `70` | `65` | `60` | `55` | `50` | `45` | `40` | `35` | `30` | `25` | `20` | `15` | `10` | `5` % (optional, default `fluid`)
+- **children** - ReactNode
+
+Example:
+
+```tsx
+import { Table } from '@maskingtech/designsystem';
+
+<Table>
+  <Table.Header>
+    <Table.Row>
+      <Table.Cell size='30'>Month</Table.Cell>
+      <Table.Cell size='70'>Amount</Table.Cell>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell alignX='left'>January</Table.Cell>
+      <Table.Cell alignX='right'>200</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+  <Table.Footer>
+    <Table.Row>
+      <Table.Cell colspan='2'>Total: 200</Table.Cell>
+    </Table.Row>
+  </Table.Footer>
+</Table>
+```
+
+Customization options (selector: `.table`):
+
+- `--padding-large` (default: `1em`)
+- `--padding-medium` (default: `0.7em`)
+- `--padding-small` (default: `0.4em`)
+- `--header-background-color` (default: `var(--color-border);`)
+- `--header-forground-color` (default: `var(--color-primary-foreground)`)
+- `--row-odd-color` (default: `var(--color-primary-background)`)
+- `--row-even-color` (default: `var(--color-secondary-background)`)
+- `--footer-border-small` (default: `0.1rem`)
+- `--footer-border-medium` (default: `0.2rem`)
+- `--footer-border-large` (default: `0.3rem`)
+- `--footer-border-color` (default: `var(--color-border)`)
+- `--footer-forground-color` (default: `var(--color-primary-foreground)`)
 
 ## Text elements
 
@@ -410,8 +487,8 @@ A labeled input wrapper that composes `Label` with an input element (`TextBox`, 
 
 Properties:
 
-- **label** - `ReactElement<LabelProps>` (required)
-- **element** - `ReactElement<TextBoxProps | TextAreaProps | SelectProps>` (required)
+- **label** - `ReactElement<Label>` (required)
+- **element** - `ReactElement<TextBox | TextArea | Select>` (required)
 
 Example:
 
@@ -446,6 +523,39 @@ Customization options (selector: `.label`):
 
 - `--margin` (default: `0`)
 
+### DateTime
+
+A date and time input.
+
+Properties:
+
+- **name** - string (required)
+- **defaultValue** - string (optional)
+- **value** - string (optional)
+- **title** - string (optional)
+- **type** - `datetime` | `date` | `time` | `month` | `week` (optional, default `datetime`)
+- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **required** - boolean (optional)
+- **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)
+
+Example:
+
+```tsx
+import { TextBox } from '@maskingtech/designsystem';
+
+<TextBox name='firstName' placeholder='First name' />
+```
+
+Customization options (selector: `.datetime`):
+
+- `--margin` (default: `0`)
+- `--size-small` (default: `0.4em`)
+- `--size-medium` (default: `0.8em`)
+- `--size-large` (default: `1.2em`)
+- `--border-style` (default: `solid`)
+- `--border-color` (default: `var(--color-border)`)
+- `--border-width` (default: `var(--width-border)`)
+
 ### Select
 
 A styled select element that accepts a `Map` of options.
@@ -454,6 +564,7 @@ Properties:
 
 - **name** - string (required)
 - **options** - `Map<string, string>` (required)
+- **defaultValue** - string (optional)
 - **value** - string (optional)
 - **size** - `large` | `medium` | `small` (optional, default `medium`)
 - **onChange** - `ChangeEventHandler<HTMLSelectElement>` (optional)
@@ -465,7 +576,7 @@ import { Select } from '@maskingtech/designsystem';
 
 const options = new Map([['a', 'Option A'], ['b', 'Option B']]);
 
-<Select name='example' options={options} />
+<Select name='example' options={options} defaultValue='a' />
 ```
 
 Customization options (selector: `.select`):
@@ -486,6 +597,7 @@ Properties:
 
 - **name** - string (required)
 - **placeholder** - string (optional)
+- **defaultValue** - string (optional)
 - **value** - string (optional)
 - **size** - `large` | `medium` | `small` (optional, default `medium`)
 - **rows** - number (optional)
@@ -518,10 +630,12 @@ Properties:
 
 - **name** - string (required)
 - **placeholder** - string (optional)
+- **defaultValue** - string (optional)
 - **value** - string (optional)
 - **limit** - number (optional)
 - **pattern** - string (optional)
 - **title** - string (optional)
+- **type** - `email` | `number` | `password` | `search` | `text` | `tel` | `url` (optional, default `text`)
 - **size** - `large` | `medium` | `small` (optional, default `medium`)
 - **required** - boolean (optional)
 - **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)
@@ -543,6 +657,29 @@ Customization options (selector: `.textbox`):
 - `--border-style` (default: `solid`)
 - `--border-color` (default: `var(--color-border)`)
 - `--border-width` (default: `var(--width-border)`)
+
+### CheckBox
+
+A check box input with a label.
+
+Properties:
+
+- **name** - string (required)
+- **label** - string (required)
+- **checked** - boolean (optional, default `false`)
+- **value** - string (optional)
+- **required** - boolean (optional)
+- **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)
+
+Example:
+
+```tsx
+import { CheckBox } from '@maskingtech/designsystem';
+
+<CheckBox name='enabled' label='Option enabled' />
+```
+
+This element does not have customization options.
 
 ## Graphic elements
 
@@ -580,8 +717,8 @@ A simple icon span using a set of predefined icon types.
 
 Types:
 
-`attachment` | `bookmark` | `box` | `box-checked` | `box-crossed` | `calendar` | `caution` | `check` | `clock` | `close` | `cloud` |
-`comment` | `diamond` | `eye` | `flag` | `heart` | `home` | `info` | `lock` | `mail` | `music` | `phone` | `piece` | `plus` | `question` | `rain` |
+`attachment` | `bookmark` | `box` | `box-checked` | `box-crossed` | `calendar` | `caution` | `check` | `clock` | `close` | `cloud` | `comment` |
+`diamond` | `eye` | `flag` | `heart` | `home` | `info` | `lock` | `mail` | `music` | `pencil` | `phone` | `piece` | `plus` | `question` | `rain` |
 `recycle` | `search` | `settings` | `star` | `sun` | `tag` | `trash` | `umbrella` | `unlock` | `user` | `video` | `warning` | `yinyang`
 
 Properties:

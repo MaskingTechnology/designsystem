@@ -5,7 +5,7 @@ export type Props = {
     readonly value: string;
 };
 
-export default function Element({ value }: Props)
+export function Label({ value }: Props)
 {
     return <label className="label">
         {value}

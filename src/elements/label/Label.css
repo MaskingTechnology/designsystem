@@ -4,6 +4,7 @@
     {
         --margin: 0;
 
+        font-weight: var(--font-weight-medium);
         margin: var(--margin);
     }
 }

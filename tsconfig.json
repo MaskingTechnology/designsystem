@@ -4,6 +4,7 @@
         "moduleResolution": "bundler",
         "module": "esnext",
         "jsx": "react-jsx",
+        "downlevelIteration": true
     },
     "include": ["src"]
 }

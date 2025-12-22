@@ -8,7 +8,7 @@ type Props = {
     readonly children: ReactNode;
 };
 
-export default function Element({ size = 'medium', children }: Props)
+export function Paragraph({ size = 'medium', children }: Props)
 {
     const className = 'paragraph'
         + ' size-' + size;

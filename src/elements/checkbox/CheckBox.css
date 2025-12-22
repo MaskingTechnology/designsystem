@@ -1,0 +1,12 @@
+.mtds
+{
+    .checkbox
+    {
+        input
+        {
+            accent-color: var(--color-input-foreground);
+
+            margin-right: 0.5em;
+        }
+    }
+}

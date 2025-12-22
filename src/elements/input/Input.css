@@ -11,9 +11,14 @@
         gap: var(--gap);
         margin: var(--margin);
 
-        .label
+        label
         {
-            font-weight: var(--font-weight-medium);
+            width: 100%;
+        }
+
+        input, textarea, select
+        {
+            width: 100%;
         }
     }
 }
