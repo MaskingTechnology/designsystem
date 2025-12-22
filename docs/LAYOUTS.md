@@ -74,4 +74,4 @@ Customization options (selector: `.layout-sidebar`):
 - `--sidebar-width` (default: `260px`)
 - `--content-width` (default: `640px`)
 - `--modal-width` (default: `700px`)
-- ` --content-gap` (default: `2em`)
+- `--content-gap` (default: `2em`)

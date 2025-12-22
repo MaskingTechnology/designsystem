@@ -5,8 +5,8 @@ import './Border.css';
 
 type Props = {
     readonly type?: 'normal' | 'dashed' | 'dotted';
-    readonly size?: 'large' | 'medium' | 'small';
-    readonly padding?: 'large' | 'medium' | 'small' | 'none';
+    readonly size?: 'small' | 'large' | 'medium';
+    readonly padding?: 'none' | 'small' | 'medium' | 'large';
     readonly children?: ReactNode;
 };
 

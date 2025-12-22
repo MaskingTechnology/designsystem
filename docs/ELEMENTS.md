@@ -21,8 +21,8 @@ A bordered container element.
 Properties:
 
 - **type** - `normal`| `dashed` | `dotted` (optional, default `normal`)
-- **padding** - `large` | `medium` | `small` | `none` (optional, default `large`)
-- **size** - `large` | `medium` | `small` (optional, default `large`)
+- **padding** - `none` | `small` | `medium` | `large` (optional, default `large`)
+- **size** - `small` | `medium` | `large` (optional, default `large`)
 
 Example:
 
@@ -39,12 +39,12 @@ Customization options (selector: `.border`):
 - `--border-radius` (default: `0`)
 - `--color` (default: `var(--color-border)`)
 - `--margin` (default: `0`)
-- `--padding-large` (default: `2em`)
-- `--padding-medium` (default: `1.5em`)
-- `--padding-small` (default: `1em`)
-- `--size-large` (default: `0.3em`)
-- `--size-medium` (default: `0.2em`)
-- `--size-small` (default: `0.1em`)
+- `--padding-large` (default: `var(--container-padding-small)`)
+- `--padding-medium` (default: `var(--container-padding-medium)`)
+- `--padding-small` (default: `var(--container-padding-large)`)
+- `--size-large` (default: `var(--element-border-small)`)
+- `--size-medium` (default: `var(--element-border-medium)`)
+- `--size-small` (default: `var(--element-border-large)`)
 
 ### Panel
 
@@ -52,7 +52,7 @@ A versatile container for contextual content (alerts, messages, etc.).
 
 Properties:
 
-- **padding** - `large` | `medium` | `small` (optional, default `large`)
+- **padding** - `small` | `medium` | `large` (optional, default `large`)
 - **type** - `normal` | `alert` | `warning` | `success` | `error` | `transparent` (optional, default `normal`)
 - **children** - ReactNode (optional)
 
@@ -67,10 +67,10 @@ import { Panel } from '@maskingtech/designsystem';
 Customization options (selector: `.panel`):
 
 - `--border-radius` (default: `0`)
-- `--margin` (default: `0 0 1.5em 0`)
-- `--padding-large` (default: `2em`)
-- `--padding-medium` (default: `1.5em`)
-- `--padding-small` (default: `1em`)
+- `--margin` (default: `0`)
+- `--padding-small` (default: `--container-padding-small`)
+- `--padding-medium` (default: `--container-padding-medium`)
+- `--padding-large` (default: `--container-padding-large`)
 - `--type-normal-background-color` (default: `var(--color-secondary-background)`)
 - `--type-normal-foreground-color` (default: `var(--color-primary-foreground)`)
 - `--type-alert-background-color` (default: `var(--color-alert-background)`)
@@ -114,7 +114,7 @@ A grid layout with preset column layouts and gaps.
 Properties:
 
 - **layout** - `two-columns` | `three-columns` | `four-columns` (required)
-- **gap** - `large` | `medium` | `small` | `none` (optional, default `medium`)
+- **gap** - `none` | `small` | `medium` | `large` (optional, default `medium`)
 - **children** - ReactNode
 
 Example:
@@ -131,9 +131,9 @@ import { Grid } from '@maskingtech/designsystem';
 
 Customization options (selector: `.grid`):
 
-- `--gap-small` (default: `0.5em`)
-- `--gap-medium` (default: `1em`)
-- `--gap-large` (default: `2em`)
+- `--gap-small` (default: `var(--container-padding-small)`)
+- `--gap-medium` (default: `var(--container-padding-medium)`)
+- `--gap-large` (default: `var(--container-padding-large)`)
 
 ### Column
 
@@ -143,7 +143,7 @@ Properties:
 
 - **alignX** - `left` | `center` | `right` | `stretch` (optional, default `left`)
 - **alignY** - `top` | `center` | `bottom` | `justify` (optional, default `top`)
-- **gap** - `large` | `medium` | `small` | `none` (optional, default `medium`)
+- **gap** - `none` | `small` | `medium` | `large` (optional, default `medium`)
 - **wrap** - `wrap` | `nowrap` (optional, default `nowrap`)
 - **children** - ReactNode
 
@@ -160,9 +160,9 @@ import { Column } from '@maskingtech/designsystem';
 
 Customization options (selector: `.column`):
 
-- `--gap-small` (default: `0.4em`)
-- `--gap-medium` (default: `1em`)
-- `--gap-large` (default: `2em`)
+- `--gap-small` (default: `var(--container-gap-small)`)
+- `--gap-medium` (default: `var(--container-gap-medium)`)
+- `--gap-large` (default: `var(--container-gap-large)`)
 
 ### Row
 
@@ -172,7 +172,7 @@ Properties:
 
 - **alignX** - `left` | `center` | `right` | `justify` (optional, default `left`)
 - **alignY** - `top` | `center` | `bottom` | `stretch` (optional, default `top`)
-- **gap** - `large` | `medium` | `small` | `none` (optional, default `medium`)
+- **gap** - `none` | `small` | `medium` | `large` (optional, default `medium`)
 - **wrap** - `wrap` | `nowrap` (optional, default `nowrap`)
 - **children** - ReactNode
 
@@ -189,9 +189,9 @@ import { Row } from '@maskingtech/designsystem';
 
 Customization options (selector: `.row`):
 
-- `--gap-small` (default: `0.4em`)
-- `--gap-medium` (default: `1em`)
-- `--gap-large` (default: `2em`)
+- `--gap-small` (default: `var(--container-gap-small)`)
+- `--gap-medium` (default: `var(--container-gap-medium)`)
+- `--gap-large` (default: `var(--container-gap-large)`)
 
 ### Cell
 
@@ -218,7 +218,7 @@ A table layout with a head, body and footer containing rows and cells.
 
 `Table` properties:
 
-- **padding** - `large` | `medium` | `small` (optional, default `medium`)
+- **padding** - `small` | `medium` | `large` (optional, default `medium`)
 - **children** - `ReactElement<Table.Header | Table.Body | Table.Footer>` (required)
 
 `Table.Header` properties:
@@ -227,7 +227,7 @@ A table layout with a head, body and footer containing rows and cells.
 
 `Table.Body` properties:
 
-- **border** - `large` | `medium` | `small` | `name` (optional, default `medium`)
+- **border** - `none` | `small` | `medium` | `large` (optional, default `medium`)
 - **children** - `ReactElement<Table.Row>` (required)
 
 `Table.Footer` properties:
@@ -282,9 +282,9 @@ Customization options (selector: `.table`):
 - `--header-forground-color` (default: `var(--color-primary-foreground)`)
 - `--row-odd-color` (default: `var(--color-primary-background)`)
 - `--row-even-color` (default: `var(--color-secondary-background)`)
-- `--footer-border-small` (default: `0.1rem`)
-- `--footer-border-medium` (default: `0.2rem`)
-- `--footer-border-large` (default: `0.3rem`)
+- `--footer-border-small` (default: `var(--element-border-small)`)
+- `--footer-border-medium` (default: `var(--element-border-medium)`)
+- `--footer-border-large` (default: `var(--element-border-large)`)
 - `--footer-border-color` (default: `var(--color-border)`)
 - `--footer-forground-color` (default: `var(--color-primary-foreground)`)
 
@@ -296,7 +296,7 @@ Heading element that maps `size` to `h1`/`h2`/`h3`.
 
 Properties:
 
-- **size** - `large` | `medium` | `small` (optional, default `large`)
+- **size** - `small` | `medium` | `large` (optional, default `large`)
 - **children** - ReactNode
 
 Example:
@@ -310,9 +310,9 @@ import { Title } from '@maskingtech/designsystem';
 Customization options (selector: `.title`):
 
 - `--margin` (default: `0 0 0.8em 0`)
-- `--size-large` (default: `2em`)
-- `--size-medium` (default: `1.5em`)
 - `--size-small` (default: `1em`)
+- `--size-medium` (default: `1.5em`)
+- `--size-large` (default: `2em`)
 
 ### Paragraph
 
@@ -320,7 +320,7 @@ Styled paragraph element.
 
 Properties:
 
-- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **children** - ReactNode
 
 Example:
@@ -335,9 +335,9 @@ Customization options (selector: `.paragraph`):
 
 - `--margin` (default: `var(--margin-container)`)
 - `--line-height` (default: `1.5em`)
-- `--size-large` (default: `1.5em`)
-- `--size-medium` (default: `1em`)
-- `--size-small` (default: `0.75em`)
+- `--size-small` (default: `var(--element-font-small)`)
+- `--size-medium` (default: `var(--element-font-medium)`)
+- `--size-large` (default: `var(--element-font-large)`)
 
 ### Text
 
@@ -347,7 +347,7 @@ Properties:
 
 - **value** - string (required)
 - **type** - `primary` | `secondary` (optional, default `primary`)
-- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **weight** - `light` | `normal` | `bold` (optional, default `normal`)
 - **wrap** - `none` | `normal` | `break-word` (optional, default `none`)
 
@@ -363,9 +363,9 @@ Customization options (selector: `.text`):
 
 - `--primary-color` (default: `var(--color-primary-foreground)`)
 - `--secondary-color` (default: `var(--color-secondary-foreground)`)
-- `--size-large` (default: `1.2em`)
-- `--size-medium` (default: `1.0em`)
-- `--size-small` (default: `0.9em`)
+- `--size-small` (default: `var(--element-font-small)`)
+- `--size-medium` (default: `var(--element-font-medium)`)
+- `--size-large` (default: `var(--element-font-large)`)
 - weights are defined at global level.
 
 ## Interaction elements
@@ -377,7 +377,8 @@ A clickable input element styled as a button.
 Properties:
 
 - **type** - `submit` | `primary` | `secondary` | `disabled` (optional, default `primary`)
-- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **border** - `none` | `small` | `medium` | `large` (optional, default `small`)
+- **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **text** - string (required)
 - **onClick** - `() => void` (optional)
 
@@ -393,8 +394,11 @@ Customization options (selector: `.button`):
 
 - `--border-radius` (default: `2em`)
 - `--margin` (default: `0`)
-- `--border-style` (default: `solid`)
-- `--border-color` (default: `var(--color-border)`)
+- `--border-style` (default: `var(--input-border-style)`)
+- `--border-color-disabled` (default: `var(--input-border-color)`)
+- `--border-small` (default: `var(--input-border-small)`)
+- `--border-medium` (default: `var(--input-border-medium)`)
+- `--border-large` (default: `var(--input-border-large)`)
 - `--border-width` (default: `var(--width-border)`)
 - `--type-primary-background-color` (default: `var(--color-primary-action-background)`)
 - `--type-primary-foreground-color` (default: `var(--color-primary-action-foreground)`)
@@ -413,7 +417,7 @@ A wrapper element that handles clicks and optional padding.
 
 Properties:
 
-- **padding** - `large` | `medium` | `small` | `none` (optional, default `none`)
+- **padding** - `none` | `small` | `medium` | `large` (optional, default `none`)
 - **onClick** - `() => void` (optional)
 - **children** - ReactNode (optional)
 
@@ -428,10 +432,9 @@ import { ClickArea } from '@maskingtech/designsystem';
 Customization options (selector: `.clickarea`):
 
 - `--margin` (default: `0`)
-- `--padding-large` (default: `2em`)
-- `--padding-medium` (default: `1.5em`)
-- `--padding-small` (default: `1em`)
-- `--padding-none` (default: `0em`)
+- `--padding-small` (default: `var(--container-padding-small)`)
+- `--padding-medium` (default: `var(--container-padding-medium)`)
+- `--padding-large` (default: `var(--container-padding-large)`)
 
 ### Link
 
@@ -534,7 +537,8 @@ Properties:
 - **value** - string (optional)
 - **title** - string (optional)
 - **type** - `datetime` | `date` | `time` | `month` | `week` (optional, default `datetime`)
-- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **border** - `small` | `medium` | `large` (optional, default `small`)
+- **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **required** - boolean (optional)
 - **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)
 
@@ -549,12 +553,14 @@ import { TextBox } from '@maskingtech/designsystem';
 Customization options (selector: `.datetime`):
 
 - `--margin` (default: `0`)
-- `--size-small` (default: `0.4em`)
-- `--size-medium` (default: `0.8em`)
-- `--size-large` (default: `1.2em`)
-- `--border-style` (default: `solid`)
-- `--border-color` (default: `var(--color-border)`)
-- `--border-width` (default: `var(--width-border)`)
+- `--border-color` (default: `var(--input-border-color)`)
+- `--border-style` (default: `var(--input-border-style)`)
+- `--border-small` (default: `var(--input-border-small)`)
+- `--border-medium` (default: `var(--input-border-medium)`)
+- `--border-large` (default: `var(--input-border-large)`)
+- `--size-small` (default: `var(--input-padding-large)`)
+- `--size-medium` (default: `var(--input-padding-large)`)
+- `--size-large` (default: `var(--input-padding-large)`)
 
 ### Select
 
@@ -566,7 +572,8 @@ Properties:
 - **options** - `Map<string, string>` (required)
 - **defaultValue** - string (optional)
 - **value** - string (optional)
-- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **border** - `small` | `medium` | `large` (optional, default `small`)
+- **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **onChange** - `ChangeEventHandler<HTMLSelectElement>` (optional)
 
 Example:
@@ -582,12 +589,14 @@ const options = new Map([['a', 'Option A'], ['b', 'Option B']]);
 Customization options (selector: `.select`):
 
 - `--margin` (default: `0`)
-- `--size-small` (default: `0.4em`)
-- `--size-medium` (default: `0.8em`)
-- `--size-large` (default: `1.2em`)
-- `--border-style` (default: `solid`)
-- `--border-color` (default: `var(--color-border)`)
-- `--border-width` (default: `var(--width-border)`)
+- `--border-color` (default: `var(--input-border-color)`)
+- `--border-style` (default: `var(--input-border-style)`)
+- `--border-small` (default: `var(--input-border-small)`)
+- `--border-medium` (default: `var(--input-border-medium)`)
+- `--border-large` (default: `var(--input-border-large)`)
+- `--size-small` (default: `var(--input-padding-large)`)
+- `--size-medium` (default: `var(--input-padding-large)`)
+- `--size-large` (default: `var(--input-padding-large)`)
 
 ### TextArea
 
@@ -599,7 +608,8 @@ Properties:
 - **placeholder** - string (optional)
 - **defaultValue** - string (optional)
 - **value** - string (optional)
-- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **border** - `small` | `medium` | `large` (optional, default `small`)
+- **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **rows** - number (optional)
 - **limit** - number (optional)
 - **onChange** - `ChangeEventHandler<HTMLTextAreaElement>` (optional)
@@ -615,12 +625,14 @@ import { TextArea } from '@maskingtech/designsystem';
 Customization options (selector: `.textarea`):
 
 - `--margin` (default: `0`)
-- `--size-small` (default: `0.4em`)
-- `--size-medium` (default: `0.8em`)
-- `--size-large` (default: `1.2em`)
-- `--border-style` (default: `solid`)
-- `--border-color` (default: `var(--color-border)`)
-- `--border-width` (default: `var(--width-border)`)
+- `--border-color` (default: `var(--input-border-color)`)
+- `--border-style` (default: `var(--input-border-style)`)
+- `--border-small` (default: `var(--input-border-small)`)
+- `--border-medium` (default: `var(--input-border-medium)`)
+- `--border-large` (default: `var(--input-border-large)`)
+- `--size-small` (default: `var(--input-padding-large)`)
+- `--size-medium` (default: `var(--input-padding-large)`)
+- `--size-large` (default: `var(--input-padding-large)`)
 
 ### TextBox
 
@@ -636,7 +648,8 @@ Properties:
 - **pattern** - string (optional)
 - **title** - string (optional)
 - **type** - `email` | `number` | `password` | `search` | `text` | `tel` | `url` (optional, default `text`)
-- **size** - `large` | `medium` | `small` (optional, default `medium`)
+- **border** - `small` | `medium` | `large` (optional, default `small`)
+- **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **required** - boolean (optional)
 - **onChange** - `ChangeEventHandler<HTMLInputElement>` (optional)
 
@@ -651,12 +664,14 @@ import { TextBox } from '@maskingtech/designsystem';
 Customization options (selector: `.textbox`):
 
 - `--margin` (default: `0`)
-- `--size-small` (default: `0.4em`)
-- `--size-medium` (default: `0.8em`)
-- `--size-large` (default: `1.2em`)
-- `--border-style` (default: `solid`)
-- `--border-color` (default: `var(--color-border)`)
-- `--border-width` (default: `var(--width-border)`)
+- `--border-color` (default: `var(--input-border-color)`)
+- `--border-style` (default: `var(--input-border-style)`)
+- `--border-small` (default: `var(--input-border-small)`)
+- `--border-medium` (default: `var(--input-border-medium)`)
+- `--border-large` (default: `var(--input-border-large)`)
+- `--size-small` (default: `var(--input-padding-large)`)
+- `--size-medium` (default: `var(--input-padding-large)`)
+- `--size-large` (default: `var(--input-padding-large)`)
 
 ### CheckBox
 
@@ -780,9 +795,9 @@ import { Ruler } from '@maskingtech/designsystem';
 Customization options (selector: `.ruler`):
 
 - `--color` (default: `var(--color-border)`)
-- `--size-small` (default: `0.1rem`)
-- `--size-medium` (default: `0.2rem`)
-- `--size-large` (default: `0.3rem`)
+- `--size-large` (default: `var(--element-border-small)`)
+- `--size-medium` (default: `var(--element-border-medium)`)
+- `--size-small` (default: `var(--element-border-large)`)
 
 ### Spinner
 

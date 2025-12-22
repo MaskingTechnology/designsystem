@@ -33,7 +33,7 @@ import '/path/to/customizations.css';
 
 ## Global options
 
-### Font
+### Font properties
 
 - `--font-family` (default: `sans-serif`)
 - `--font-size` (default: `16px`)
@@ -44,7 +44,7 @@ import '/path/to/customizations.css';
 - `--font-weight-semi-bold` (default: `600`)
 - `--font-weight-bold` (default: `700`)
 
-### Color
+### Color definitions
 
 - `--color-background` (default: `transparent`)
 - `--color-background-hover` (default: `#efefef`)
@@ -69,7 +69,31 @@ import '/path/to/customizations.css';
 - `--color-success-background` (default: `#efefef`)
 - `--color-success-foreground` (default: `#666666`)
 
-### Size
+### Element properties
 
-- `--margin-container` (default: `0 0 1.2em 0`)
-- `--width-border` (default: `0.05em`)
+- `--element-border-small` (default: `0.1em`)
+- `--element-border-medium` (default: `0.2em`)
+- `--element-border-large` (default: `0.3em`)
+- `--element-font-small` (default: `0.9em`)
+- `--element-font-medium` (default: `1em`)
+- `--element-font-large` (default: `1.2em`)
+
+### Container properties
+
+- `--container-gap-small` (default: `0.4em`)
+- `--container-gap-medium` (default: `1em`)
+- `--container-gap-large` (default: `2em`)
+- `--container-padding-small` (default: `1em`)
+- `--container-padding-medium` (default: `1.5em`)
+- `--container-padding-large` (default: `2em`)
+
+### Input properties
+
+- `--input-border-style` (default: `solid`)
+- `--input-border-color` (default: `var(--color-border)`)
+- `--input-border-small` (default: `0.05em`)
+- `--input-border-medium` (default: `0.075em`)
+- `--input-border-large` (default: `0.1em`)
+- `--input-padding-small` (default: `0.4em`)
+- `--input-padding-medium` (default: `0.8em`)
+- `--input-padding-large` (default: `1.2em`)

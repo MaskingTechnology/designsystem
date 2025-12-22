@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import './Paragraph.css';
 
 type Props = {
-    readonly size?: 'large' | 'medium' | 'small';
+    readonly size?: 'small' | 'medium' | 'large';
     readonly children: ReactNode;
 };
 

@@ -3,15 +3,17 @@ import './Button.css';
 
 type Props = {
     readonly type?: 'submit' | 'primary' | 'secondary' | 'disabled';
+    readonly border?: 'none' | 'small' | 'medium' | 'large';
     readonly size?: 'large' | 'medium' | 'small';
     readonly text: string;
     readonly onClick?: () => void;
 };
 
-export function Button({ type = 'primary', size = 'medium', text, onClick }: Props)
+export function Button({ type = 'primary', border = 'small', size = 'medium', text, onClick }: Props)
 {
     const className = 'button'
         + ' type-' + type
+        + ' border-' + border
         + ' size-' + size;
 
     const disabled = type === 'disabled';

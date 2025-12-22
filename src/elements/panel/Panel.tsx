@@ -5,7 +5,7 @@ import './Panel.css';
 
 type Props = {
     readonly type?: 'normal' | 'alert' | 'warning' | 'success' | 'error' | 'transparent';
-    readonly padding?: 'large' | 'medium' | 'small';
+    readonly padding?: 'small' | 'medium' | 'large';
     readonly children?: ReactNode;
 };
 

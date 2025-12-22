@@ -9,7 +9,8 @@ export type Props = {
     readonly placeholder?: string;
     readonly defaultValue?: string;
     readonly value?: string;
-    readonly size?: 'large' | 'medium' | 'small';
+    readonly border?: 'none' | 'small' | 'medium' | 'large';
+    readonly size?: 'small' | 'medium' | 'large';
     readonly rows?: number;
     readonly limit?: number;
     readonly onChange?: ChangeEventHandler<HTMLTextAreaElement>;
@@ -17,9 +18,10 @@ export type Props = {
 
 type Ref = HTMLTextAreaElement;
 
-export const TextArea = forwardRef<Ref, Props>(function Element({ name, placeholder, defaultValue, value, size = 'medium', rows, limit, onChange }, ref)
+export const TextArea = forwardRef<Ref, Props>(function Element({ name, placeholder, defaultValue, value, border ='small', size = 'medium', rows, limit, onChange }, ref)
 {
     const className = 'textarea'
+        + ' border-' + border
         + ' size-' + size;
 
     return <textarea

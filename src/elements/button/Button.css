@@ -5,9 +5,13 @@
         --margin: 0;
 
         --border-radius: 2em;
-        --border-style: solid;
-        --border-color: var(--color-border);
-        --border-width: var(--width-border);
+        --border-style: var(--input-border-style);
+
+        --border-color-disabled: var(--input-border-color);
+
+        --border-small: var(--input-border-small);
+        --border-medium: var(--input-border-medium);
+        --border-large: var(--input-border-large);
 
         --size-small: 0.2em 2.2em;
         --size-medium: 0.5em 2.2em;
@@ -20,7 +24,8 @@
         --type-disabled-background-color: transparent;
 
         border-radius: var(--border-radius);
-        border: 0;
+        border-style: var(--border-style);
+        border-color: var(--border-color);
 
         cursor: pointer;
         margin: var(--margin);
@@ -30,6 +35,26 @@
         font-family: inherit;
         font-size: inherit;
 
+        &.border-none
+        {
+            border-width: 0;
+        }
+
+        &.border-small
+        {
+            border-width: var(--border-small);
+        }
+
+        &.border-medium
+        {
+            border-width: var(--border-medium);
+        }
+
+        &.border-large
+        {
+            border-width: var(--border-large);
+        }
+        
         &.size-small
         {
             padding: var(--size-small);
@@ -49,6 +74,7 @@
         &.type-submit
         {
             background-color: var(--type-primary-background-color);
+            border-color: var(--type-primary-background-color);
             color: var(--type-primary-foreground-color);
 
             font-weight: var(--font-weight-bold);
@@ -57,17 +83,24 @@
         &.type-primary:hover,
         &.type-submit:hover
         {
-            background-color: color-mix(in srgb, black 10%, var(--type-primary-background-color));
+            --hover-color: color-mix(in srgb, black 10%, var(--type-primary-background-color));
+
+            background-color: var(--hover-color);
+            border-color: var(--hover-color);
         }
 
         &.type-primary:focus
         {
-            background-color: color-mix(in srgb, black 20%, var(--type-primary-background-color));
+            --hover-color: color-mix(in srgb, black 20%, var(--type-primary-background-color));
+
+            background-color: var(--hover-color);
+            border-color: var(--hover-color);
         }
 
         &.type-secondary
         {
             background-color: var(--type-secondary-background-color);
+            border-color: var(--type-secondary-background-color);
             color: var(--type-secondary-foreground-color);
 
             font-weight: var(--font-weight-normal);
@@ -75,21 +108,24 @@
 
         &.type-secondary:hover
         {
-            background-color: color-mix(in srgb, black 10%, var(--type-secondary-background-color));
+            --hover-color: color-mix(in srgb, black 10%, var(--type-secondary-background-color));
+
+            background-color: var(--hover-color);
+            border-color: var(--hover-color);
         }
 
         &.type-secondary:focus
         {
-            background-color: color-mix(in srgb, black 20%, var(--type-secondary-background-color));
+            --hover-color: color-mix(in srgb, black 20%, var(--type-secondary-background-color));
+
+            background-color: var(--hover-color);
+            border-color: var(--hover-color);
         }
 
         &.type-disabled
         {
             background-color: var(--type-disabled-background-color);
-
-            border-color: var(--border-color);
-            border-style: var(--border-style);
-            border-width: var(--border-width);
+            border-color: var(--border-color-disabled);
 
             font-weight: var(--font-weight-light);
 

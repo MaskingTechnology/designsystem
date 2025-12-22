@@ -4,9 +4,9 @@
     {
         --margin: 0 0 0.8em 0;
 
-        --size-large: 2em;
-        --size-medium: 1.5em;
         --size-small: 1em;
+        --size-medium: 1.5em;
+        --size-large: 2em;
 
         margin: var(--margin);
 

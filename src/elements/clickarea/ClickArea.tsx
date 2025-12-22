@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import './ClickArea.css';
 
 type Props = {
-    readonly padding?: 'large' | 'medium' | 'small' | 'none';
+    readonly padding?: 'none' | 'small' | 'medium' | 'large';
     readonly onClick?: () => void;
     readonly children?: ReactNode;
 };

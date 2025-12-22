@@ -5,9 +5,9 @@
         --primary-color: var(--color-primary-foreground);
         --secondary-color: var(--color-secondary-foreground);
 
-        --size-small: 0.9em;
-        --size-medium: 1em;
-        --size-large: 1.2em;
+        --size-small: var(--element-font-small);
+        --size-medium: var(--element-font-medium);
+        --size-large: var(--element-font-large);
 
         display: inline-block;
 

@@ -42,9 +42,32 @@
     --color-success-background: #efefef;
     --color-success-foreground: #666666;
 
-    --margin-container: 0 0 1.2em 0;
+    --element-border-small: 0.1em;
+    --element-border-medium: 0.2em;
+    --element-border-large: 0.3em;
 
-    --width-border: 0.05em;
+    --element-font-small: 0.9em;
+    --element-font-medium: 1em;
+    --element-font-large: 1.2em;
+
+    --container-gap-small: 0.4em;
+    --container-gap-medium: 1em;
+    --container-gap-large: 2em;
+
+    --container-padding-small: 1em;
+    --container-padding-medium: 1.5em;
+    --container-padding-large: 2em;
+
+    --input-border-style: solid;
+    --input-border-color: var(--color-border);
+
+    --input-border-small: 0.05em;
+    --input-border-medium: 0.075em;
+    --input-border-large: 0.1em;
+
+    --input-padding-small: 0.4em;
+    --input-padding-medium: 0.8em;
+    --input-padding-large: 1.2em;
 
     font-family: var(--font-family);
     font-size: var(--font-size);
