@@ -7,6 +7,7 @@ import './Select.css';
 export type Props = {
     readonly name: string;
     readonly options: Map<string, string>;
+    readonly defaultValue?: string;
     readonly value?: string;
     readonly size?: 'large' | 'medium' | 'small';
     readonly onChange?: ChangeEventHandler<HTMLSelectElement>;
@@ -14,7 +15,7 @@ export type Props = {
 
 type Ref = HTMLSelectElement;
 
-export default forwardRef<Ref, Props>(function Element({ name, options, value, size = 'medium', onChange }, ref)
+export const Select = forwardRef<Ref, Props>(function Element({ name, options, defaultValue, value, size = 'medium', onChange }, ref)
 {
     const className = 'select'
         + ' size-' + size;
@@ -22,7 +23,8 @@ export default forwardRef<Ref, Props>(function Element({ name, options, value, s
     return <select
         className={className}
         name={name}
-        defaultValue={value}
+        defaultValue={defaultValue}
+        value={value}
         onChange={onChange}
         ref={ref}
     >

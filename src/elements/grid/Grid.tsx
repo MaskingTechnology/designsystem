@@ -9,7 +9,7 @@ type Props = {
     readonly children: ReactNode;
 };
 
-export default function Element({ layout, gap = 'medium', children }: Props)
+export function Grid({ layout, gap = 'medium', children }: Props)
 {
     const className = 'grid'
         + ' layout-' + layout

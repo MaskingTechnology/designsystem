@@ -34,6 +34,32 @@ Customization options (selector: `.dropdown`):
 - `--arrow-color` (default: `var(--color-alert-foreground)`)
 - `--border-color` (default: `var(--color-border)`)
 
+## ModalManager
+
+Manages multiple models in a single component.
+
+Properties:
+
+- **selectedId** - string (optional)
+- **children** - one or more `Modal` elements (required)
+
+Example:
+
+```tsx
+import { Modal, ModalManager } from '@maskingtech/designsystem';
+
+<ModalManager selectedId='first'>
+    <Modal id='first'>
+        First modal message.
+    </Modal>
+    <Modal id='second'>
+        Second modal message.
+    </Modal>
+</ModalManager>
+```
+
+This component does not have customization options.
+
 ## Tabs
 
 Tabs provide a tabbed navigation. Use `Tab` elements as children of `Tabs`.
@@ -45,7 +71,7 @@ Tabs provide a tabbed navigation. Use `Tab` elements as children of `Tabs`.
 - **children** - one or more `Tab` elements (required)
 - **onChange** - `(newId: string, oldId?: string) => void` (optional)
 
-`Tab` Properties:
+`Tabs.Tab` Properties:
 
 - **id** - string (required)
 - **title** - ReactNode (required)
@@ -54,11 +80,11 @@ Tabs provide a tabbed navigation. Use `Tab` elements as children of `Tabs`.
 Example:
 
 ```tsx
-import { Tabs, Tab } from '@maskingtech/designsystem';
+import { Tabs } from '@maskingtech/designsystem';
 
-<Tabs selectedId='tab1' onChange={(n,o)=>console.log(n,o)}>
-  <Tab id='tab1' title='First'>First content</Tab>
-  <Tab id='tab2' title='Second'>Second content</Tab>
+<Tabs selectedId='tab1' separator={<hr />} onChange={(n,o)=>console.log(n,o)}>
+  <Tabs.Tab id='tab1' title='First'>First content</Tabs.Tab>
+  <Tabs.Tab id='tab2' title='Second'>Second content</Tabs.Tab>
 </Tabs>
 ```
 

@@ -10,7 +10,7 @@ type Props = {
     readonly children?: ReactNode;
 };
 
-export default function Element({ type = 'normal', size = 'large', padding = 'large', children }: Props)
+export function Border({ type = 'normal', size = 'large', padding = 'large', children }: Props)
 {
     const className = 'border'
         + ' type-' + type

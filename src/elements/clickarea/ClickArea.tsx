@@ -9,7 +9,7 @@ type Props = {
     readonly children?: ReactNode;
 };
 
-export default function Element({ padding = 'none', onClick, children }: Props)
+export function ClickArea({ padding = 'none', onClick, children }: Props)
 {
     const className = 'clickarea'
         + ' padding-' + padding;

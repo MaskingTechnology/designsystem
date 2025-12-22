@@ -11,7 +11,7 @@ type Props = {
 
 type Ref = HTMLFormElement;
 
-export default forwardRef<Ref, Props>(function Element({ children, submitHandler }, ref)
+export const Form = forwardRef<Ref, Props>(function Element({ children, submitHandler }, ref)
 {
     const handleSubmit = (event: FormEvent<HTMLElement>) =>
     {

@@ -2,7 +2,9 @@
 import type { ReactElement, ReactNode } from 'react';
 import { useEffect, useEffectEvent, useMemo, useState } from 'react';
 
+import Tab from './Tab';
 import type { Props as TabProps } from './Tab';
+
 import './Tabs.css';
 
 type Props = {
@@ -12,7 +14,7 @@ type Props = {
     readonly onChange?: (newId: string, oldId?: string) => void;
 };
 
-export default function Component({ separator, selectedId, children, onChange }: Props)
+export function Tabs({ separator, selectedId, children, onChange }: Props)
 {
     const [selected, setSelected] = useState<string>(selectedId ?? '');
 
@@ -83,3 +85,5 @@ export default function Component({ separator, selectedId, children, onChange }:
         <div className="content">{tabMap[selected]}</div>
     </div>;
 }
+
+Tabs.Tab = Tab;
