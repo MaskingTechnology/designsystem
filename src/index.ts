@@ -2,8 +2,8 @@
 export { Avatar } from './elements/avatar/Avatar';
 export { Border } from './elements/border/Border';
 export { Button } from './elements/button/Button';
-export { CheckBox } from './elements/checkbox/CheckBox';
 export { Cell } from './elements/cell/Cell';
+export { CheckBox } from './elements/checkbox/CheckBox';
 export { ClickArea } from './elements/clickarea/ClickArea';
 export { Column } from './elements/column/Column';
 export { DateTime } from './elements/datetime/DateTime';

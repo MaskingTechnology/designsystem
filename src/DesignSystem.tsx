@@ -9,5 +9,5 @@ type Props = {
 
 export function DesignSystem({ children }: Props)
 {
-    return <div className='mtds'>{ children }</div>
+    return <div className='mtds'>{ children }</div>;
 }
