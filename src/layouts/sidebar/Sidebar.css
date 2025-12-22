@@ -6,13 +6,13 @@
         --footer-height: 4.4em;
 
         --modal-width: 700px;
-        --aside-width: 260px;
-        --main-width: 640px;
+        --sidebar-width: 260px;
+        --content-width: 640px;
 
         --content-gap: 2em;
 
         --calc-gap-half: calc(var(--content-gap) / 2);
-        --calc-content-offset: calc((var(--main-width) - var(--aside-width) + var(--calc-gap-half)) / 2);
+        --calc-content-offset: calc((var(--content-width) - var(--sidebar-width) + var(--calc-gap-half)) / 2);
 
         --left-width: calc(50vw - var(--calc-content-offset));
         --right-width: calc(100vw - var(--left-width));
@@ -56,7 +56,7 @@
                     flex-shrink: 0;
                     flex-grow: 0;
                     padding: 1em 0;
-                    width: var(--aside-width);
+                    width: var(--sidebar-width);
                 }
             }
 
@@ -74,7 +74,7 @@
                     flex-shrink: 0;
                     flex-grow: 0;
                     padding: 1em 0;
-                    width: var(--main-width);
+                    width: var(--content-width);
                 }
             }
 

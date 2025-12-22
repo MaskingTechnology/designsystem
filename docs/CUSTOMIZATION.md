@@ -1,6 +1,6 @@
 # Customization | Masking Technology Design System
 
-Customizations can be made globally and per element / component.
+Customizations can be made globally and per layout, element / component.
 
 ```css
 /* customizations.css */
@@ -10,7 +10,7 @@ Customizations can be made globally and per element / component.
     /* Global options */
     --font-family: 'Inter', sans-serif;
 
-    /* Element / component specific options (by selector) */
+    /* Layout, element / component specific options (by selector) */
     .button
     {
         --type-primary-background-color: #e06666;
@@ -20,7 +20,7 @@ Customizations can be made globally and per element / component.
 }
 ```
 
-All global options can be found below. Specific selectors and options can be found in the [elements](./ELEMENTS.md) and [components](./COMPONENTS.md) documentation.
+All global options can be found below. Specific selectors and options can be found in the [layouts](./LAYOUTS.md), [elements](./ELEMENTS.md) and [components](./COMPONENTS.md) documentation.
 
 ## Activation
 

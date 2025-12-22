@@ -20,8 +20,8 @@ import { DesignSystem } from '@maskingtech/designsystem';
 import '@maskingtech/designsystem/style.css';
 
 <DesignSystem>
-    {/* elements and components here */}
+    {/* layout, elements and components here */}
 </DesignSystem>
 ```
 
-The list of elements, components, and customization options can be found in the [documentation](docs/README.md).
+The list of layouts, elements, components, and customization options can be found in the [documentation](docs/README.md).
