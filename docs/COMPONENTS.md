@@ -2,63 +2,9 @@
 
 The following components are available:
 
-* **Dropdown** - Simple selection dropdown.
 * **Tabs** - Tabbed navigation component.
 
 All details are described per component below.
-
-## Dropdown
-
-Simple selection dropdown (custom UI) that accepts a `Map` of options.
-
-Properties:
-
-- **options** - `Map<string, string>` (required)
-- **selected** - string (optional, key of the selected option)
-- **onChange** - `(oldKey: string, newKey: string) => void` (optional)
-
-Example:
-
-```tsx
-import { Dropdown } from '@maskingtech/designsystem';
-
-const opts = new Map([['a','A'],['b','B']]);
-<Dropdown options={opts} selected='a' onChange={(o,n)=>console.log(o,n)} />
-```
-
-Customization options (selector: `.dropdown`):
-
-- `--background-color` (default: `transparent`)
-- `--background-color-options` (default: `var(--color-primary-background)`)
-- `--background-color-options-hover` (default: `var(--color-background-hover)`)
-- `--arrow-color` (default: `var(--color-alert-foreground)`)
-- `--border-color` (default: `var(--color-border)`)
-
-## ModalManager
-
-Manages multiple models in a single component.
-
-Properties:
-
-- **selectedId** - string (optional)
-- **children** - one or more `Modal` elements (required)
-
-Example:
-
-```tsx
-import { Modal, ModalManager } from '@maskingtech/designsystem';
-
-<ModalManager selectedId='first'>
-    <Modal id='first'>
-        First modal message.
-    </Modal>
-    <Modal id='second'>
-        Second modal message.
-    </Modal>
-</ModalManager>
-```
-
-This component does not have customization options.
 
 ## Tabs
 
