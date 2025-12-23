@@ -3,6 +3,9 @@
   "private": false,
   "version": "0.0.3",
   "type": "module",
+  "repository": {
+    "url": "https://github.com/MaskingTechnology/designsystem"
+  },
   "scripts": {
     "build": "vite build",
     "clean": "rimraf dist",
