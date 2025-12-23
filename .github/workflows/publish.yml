@@ -26,13 +26,5 @@ jobs:
       - name: 🚀 Publish Package
         run: npm publish
 
-      - name: 🏷️ Create and Push Git Tag
-        run: |
-          VERSION=$(node -p "require('./package.json').version")
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag "v$VERSION"
-          git push origin "v$VERSION"
-
       - name: ✅ Publish Complete
         run: echo "Package published and tagged successfully."
