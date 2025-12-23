@@ -12,9 +12,9 @@
         --row-odd-color: var(--color-primary-background);
         --row-even-color: var(--color-secondary-background);
 
-        --footer-border-small: 0.1rem;
-        --footer-border-medium: 0.2rem;
-        --footer-border-large: 0.3rem;
+        --footer-border-small: var(--element-border-small);
+        --footer-border-medium: var(--element-border-medium);
+        --footer-border-large: var(--element-border-large);
 
         --footer-border-color: var(--color-border);
         --footer-forground-color: var(--color-primary-foreground);

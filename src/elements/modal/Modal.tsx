@@ -5,7 +5,6 @@ import { useEffect, useRef } from 'react';
 import './Modal.css';
 
 export type Props = {
-    readonly id?: string;
     readonly open?: boolean,
     readonly sizing?: 'full' | 'content';
     readonly children?: ReactNode;

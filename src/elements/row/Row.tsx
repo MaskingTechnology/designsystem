@@ -6,7 +6,7 @@ import './Row.css';
 type Props = {
     readonly alignX?: 'left' | 'center' | 'right' | 'justify';
     readonly alignY?: 'top' | 'center' | 'bottom' | 'stretch';
-    readonly gap?: 'large' | 'medium' | 'small' | 'none';
+    readonly gap?: 'none' | 'small' | 'medium' | 'large';
     readonly wrap?: 'wrap' | 'nowrap';
     readonly children: ReactNode;
 };

@@ -27,8 +27,9 @@ export { TextArea } from './elements/textarea/TextArea';
 export { TextBox } from './elements/textbox/TextBox';
 export { Title } from './elements/title/Title';
 
-export { Dropdown } from './components/dropdown/Dropdown';
-export { ModalManager } from './components/modals/ModalManager';
 export { Tabs } from './components/tabs/Tabs';
+
+export { CenteredLayout } from './layouts/centered/Centered';
+export { SidebarLayout } from './layouts/sidebar/Sidebar';
 
 export { DesignSystem } from './DesignSystem';

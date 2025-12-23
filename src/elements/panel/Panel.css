@@ -3,11 +3,11 @@
     .panel
     {
         --border-radius: 0;
-        --margin: 0 0 1.5em 0;
+        --margin: 0;
 
-        --padding-large: 2em;
-        --padding-medium: 1.5em;
-        --padding-small: 1em;
+        --padding-small: var(--container-padding-small);
+        --padding-medium: var(--container-padding-medium);
+        --padding-large: var(--container-padding-large);
 
         --type-alert-background-color: var(--color-alert-background);
         --type-alert-foreground-color: var(--color-alert-foreground);

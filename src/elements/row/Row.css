@@ -2,9 +2,9 @@
 {
     .row
     {
-        --gap-small: 0.4em;
-        --gap-medium: 1em;
-        --gap-large: 2em;
+        --gap-small: var(--container-gap-small);
+        --gap-medium: var(--container-gap-medium);
+        --gap-large: var(--container-gap-large);
 
         display: flex;
         flex-direction: row;

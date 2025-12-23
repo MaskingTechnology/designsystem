@@ -2,12 +2,12 @@
 {
     .paragraph
     {
-        --margin: var(--margin-container);
+        --margin: 0;
         --line-height: 1.5em;
 
-        --size-large: 1.5em;
-        --size-medium: 1em;
-        --size-small: 0.75em;
+        --size-small: var(--element-font-small);
+        --size-medium: var(--element-font-medium);
+        --size-large: var(--element-font-large);
 
         margin: var(--margin);
         line-height: var(--line-height);

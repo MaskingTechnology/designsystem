@@ -10,16 +10,18 @@ export type Props = {
     readonly value?: string;
     readonly title?: string;
     readonly type?: 'datetime' | 'date' | 'time' | 'month' | 'week';
-    readonly size?: 'large' | 'medium' | 'small';
+    readonly border?: 'none' | 'small' | 'medium' | 'large';
+    readonly size?: 'small' | 'medium' | 'large';
     readonly required?: boolean;
     readonly onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 
 type Ref = HTMLInputElement;
 
-export const DateTime = forwardRef<Ref, Props>(function Element({ name, defaultValue, value, title, type = 'datetime', size = 'medium', required, onChange }, ref)
+export const DateTime = forwardRef<Ref, Props>(function Element({ name, defaultValue, value, title, type = 'datetime', border ='small', size = 'medium', required, onChange }, ref)
 {
     const className = 'datetime'
+        + ' border-' + border
         + ' size-' + size;
 
     return <input

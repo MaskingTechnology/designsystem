@@ -4,7 +4,7 @@ import './Text.css';
 type Props = {
     readonly value: string;
     readonly type?: 'primary' | 'secondary';
-    readonly size?: 'large' | 'medium' | 'small';
+    readonly size?: 'small' | 'medium' | 'large';
     readonly weight?: 'light' | 'normal' | 'bold';
     readonly wrap?: 'none' | 'normal' | 'break-word';
 };

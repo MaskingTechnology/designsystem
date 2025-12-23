@@ -14,7 +14,7 @@ import type { Props as FooterProps } from './Footer';
 import './Table.css';
 
 type Props = {
-    readonly padding?: 'large' | 'medium' | 'small';
+    readonly padding?: 'small' | 'medium' | 'large';
     readonly children?: ReactElement<HeaderProps> | ReactElement<BodyProps> | ReactElement<FooterProps>[];
 };
 

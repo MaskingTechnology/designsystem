@@ -13,16 +13,18 @@ export type Props = {
     readonly pattern?: string;
     readonly title?: string;
     readonly type?: 'email' | 'number' | 'password' | 'search' | 'text' | 'tel' | 'url';
-    readonly size?: 'large' | 'medium' | 'small';
+    readonly border?: 'none' | 'small' | 'medium' | 'large';
+    readonly size?: 'small' | 'medium' | 'large';
     readonly required?: boolean;
     readonly onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 
 type Ref = HTMLInputElement;
 
-export const TextBox = forwardRef<Ref, Props>(function Element({ name, placeholder, defaultValue, value, limit, pattern, title, type = 'text', size = 'medium', required, onChange }, ref)
+export const TextBox = forwardRef<Ref, Props>(function Element({ name, placeholder, defaultValue, value, limit, pattern, title, type = 'text', border ='small', size = 'medium', required, onChange }, ref)
 {
     const className = 'textbox'
+        + ' border-' + border
         + ' size-' + size;
 
     return <input

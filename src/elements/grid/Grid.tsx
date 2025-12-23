@@ -5,7 +5,7 @@ import './Grid.css';
 
 type Props = {
     readonly layout: 'two-columns' | 'three-columns' | 'four-columns';
-    readonly gap?: 'large' | 'medium' | 'small' | 'none';
+    readonly gap?: 'none' | 'small' | 'medium' | 'large';
     readonly children: ReactNode;
 };
 

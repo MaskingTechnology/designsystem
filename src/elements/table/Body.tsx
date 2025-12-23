@@ -4,7 +4,7 @@ import type { ReactElement } from 'react';
 import type { Props as RowProps } from './Row';
 
 export type Props = {
-    readonly border?: 'large' | 'medium' | 'small' | 'none';
+    readonly border?: 'none' | 'small' | 'medium' | 'large';
     readonly children?: ReactElement<RowProps>;
 };
 

@@ -9,15 +9,17 @@ export type Props = {
     readonly options: Map<string, string>;
     readonly defaultValue?: string;
     readonly value?: string;
-    readonly size?: 'large' | 'medium' | 'small';
+    readonly border?: 'none' | 'small' | 'medium' | 'large';
+    readonly size?: 'small' | 'medium' | 'large';
     readonly onChange?: ChangeEventHandler<HTMLSelectElement>;
 };
 
 type Ref = HTMLSelectElement;
 
-export const Select = forwardRef<Ref, Props>(function Element({ name, options, defaultValue, value, size = 'medium', onChange }, ref)
+export const Select = forwardRef<Ref, Props>(function Element({ name, options, defaultValue, value, border ='small', size = 'medium', onChange }, ref)
 {
     const className = 'select'
+        + ' border-' + border
         + ' size-' + size;
 
     return <select
