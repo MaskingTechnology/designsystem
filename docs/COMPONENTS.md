@@ -25,7 +25,7 @@ Example:
 ```tsx
 import { Tabs } from '@maskingtech/designsystem';
 
-<Tabs selectedId='tab1' separator={<hr />} onChange={(n,o)=>console.log(n,o)}>
+<Tabs onChange={(n,o)=>console.log(n,o)}>
   <Tabs.Tab title='First' active={true} onClick={() => console.log('First clicked')} />
   <Tabs.Tab title='Second' active={false} onClick={() => console.log('Second clicked')} />
 </Tabs>

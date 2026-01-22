@@ -9,7 +9,7 @@ export type Props = {
 
 export default function Tab({ title, active, onClick }: Props)
 {
-    return <Column key={title} alignX='stretch'>
+    return <Column alignX='stretch'>
         <ClickArea padding='medium' effect='hover' alignX='center' onClick={onClick}>
             <Text value={title} weight={active ? 'bold' : 'normal'} size='large' />
         </ClickArea>
