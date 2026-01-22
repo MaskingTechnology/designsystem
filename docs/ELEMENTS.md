@@ -613,6 +613,7 @@ Properties:
 - **value** - string (optional)
 - **border** - `small` | `medium` | `large` (optional, default `small`)
 - **size** - `small` | `medium` | `large` (optional, default `medium`)
+- **cols** - number (optional)
 - **rows** - number (optional)
 - **limit** - number (optional)
 - **onChange** - `ChangeEventHandler<HTMLTextAreaElement>` (optional)
