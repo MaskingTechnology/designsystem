@@ -413,10 +413,12 @@ Customization options (selector: `.button`):
 
 ### ClickArea
 
-A wrapper element that handles clicks and optional padding.
+A wrapper element that handles clicks and optional alignment, hover effect and padding.
 
 Properties:
 
+- **alignX** - `left` | `center` | `right` (optional, default `left`)
+- **effect** - `none` | `hover` (optional, default `none`)
 - **padding** - `none` | `small` | `medium` | `large` (optional, default `none`)
 - **onClick** - `() => void` (optional)
 - **children** - ReactNode (optional)
@@ -431,10 +433,11 @@ import { ClickArea } from '@maskingtech/designsystem';
 
 Customization options (selector: `.clickarea`):
 
+- `--background-hover-color` (default `var(--input-background-hover-color)`)
 - `--margin` (default: `0`)
-- `--padding-small` (default: `var(--container-padding-small)`)
-- `--padding-medium` (default: `var(--container-padding-medium)`)
-- `--padding-large` (default: `var(--container-padding-large)`)
+- `--padding-small` (default: `var(--input-padding-small)`)
+- `--padding-medium` (default: `var(--input-padding-medium)`)
+- `--padding-large` (default: `var(--input-padding-large)`)
 
 ### Link
 

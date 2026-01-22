@@ -89,6 +89,7 @@ import '/path/to/customizations.css';
 
 ### Input properties
 
+- `--input-background-hover-color` (default: `rgba(0, 0, 0, 0.05)`)
 - `--input-border-style` (default: `solid`)
 - `--input-border-color` (default: `var(--color-border)`)
 - `--input-border-small` (default: `0.05em`)
