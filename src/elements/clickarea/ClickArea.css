@@ -2,15 +2,38 @@
 {
     .clickarea
     {
+        --background-hover-color: var(--input-background-hover-color);
+        
         --margin: 0;
 
-        --padding-small: var(--container-padding-small);
-        --padding-medium: var(--container-padding-medium);
-        --padding-large: var(--container-padding-large);
+        --padding-small: var(--input-padding-small);
+        --padding-medium: var(--input-padding-medium);
+        --padding-large: var(--input-padding-large);
 
         cursor: pointer;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         margin: var(--margin);
+
+        &.align-x-left
+        {
+            align-items: flex-start;
+        }
+
+        &.align-x-center
+        {
+            align-items: center;
+        }
+
+        &.align-x-right
+        {
+            align-items: flex-end;
+        }
+
+        &.effect-hover:hover
+        {
+            background-color: var(--background-hover-color);
+        }
 
         &.padding-none
         {

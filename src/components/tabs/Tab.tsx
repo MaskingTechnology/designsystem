@@ -1,15 +1,17 @@
 
-import type { ReactNode } from 'react';
+import { ClickArea, Column, Text } from '../../index';
 
 export type Props = {
-    readonly id: string;
-    readonly title: ReactNode;
-    readonly children: ReactNode;
+    readonly title: string;
+    readonly active: boolean;
+    readonly onClick: () => void;
 };
 
-export default function Tab({ children }: Props)
+export default function Tab({ title, active, onClick }: Props)
 {
-    return <div className='tab'>
-        {children}
-    </div>;
+    return <Column alignX='stretch'>
+        <ClickArea padding='medium' effect='hover' alignX='center' onClick={onClick}>
+            <Text value={title} weight={active ? 'bold' : 'normal'} size='large' />
+        </ClickArea>
+    </Column>;
 }

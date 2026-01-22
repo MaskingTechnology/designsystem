@@ -58,6 +58,8 @@
     --container-padding-medium: 1.5em;
     --container-padding-large: 2em;
 
+    --input-background-hover-color: rgba(0, 0, 0, 0.05);
+
     --input-border-style: solid;
     --input-border-color: var(--color-border);
 
