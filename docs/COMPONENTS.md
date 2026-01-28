@@ -50,7 +50,7 @@ import { Menu } from '@maskingtech/designsystem';
 
 ## Tabs
 
-Tabs provide a tabbed navigation. Use `Tab` elements as children of `Tabs`.
+Tabs provide a tabbed navigation. Use `Tabs.Tab` elements as children of `Tabs`.
 
 `Tabs` Properties:
 

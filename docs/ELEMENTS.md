@@ -68,9 +68,9 @@ Customization options (selector: `.panel`):
 
 - `--border-radius` (default: `0`)
 - `--margin` (default: `0`)
-- `--padding-small` (default: `--container-padding-small`)
-- `--padding-medium` (default: `--container-padding-medium`)
-- `--padding-large` (default: `--container-padding-large`)
+- `--padding-small` (default: `var(--container-padding-small)`)
+- `--padding-medium` (default: `var(--container-padding-medium)`)
+- `--padding-large` (default: `var(--container-padding-large)`)
 - `--type-normal-background-color` (default: `var(--color-secondary-background)`)
 - `--type-normal-foreground-color` (default: `var(--color-primary-foreground)`)
 - `--type-alert-background-color` (default: `var(--color-alert-background)`)
@@ -125,9 +125,9 @@ import { Navigation } from '@maskingtech/designsystem';
 Customization options (selector: `.navigation`):
 
 - `--margin` (default: `0`)
-- `--padding-small` (default: `--container-padding-small`)
-- `--padding-medium` (default: `--container-padding-medium`)
-- `--padding-large` (default: `--container-padding-large`)
+- `--padding-small` (default: `var(--container-padding-small)`)
+- `--padding-medium` (default: `var(--container-padding-medium)`)
+- `--padding-large` (default: `var(--container-padding-large)`)
 
 ## Layout elements
 
