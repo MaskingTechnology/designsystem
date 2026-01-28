@@ -2,7 +2,7 @@
 
 The following elements are available:
 
-* **Container:** `Border`, `Panel`, `Modal`
+* **Container:** `Border`, `Panel`, `Modal`, `Navigation`
 * **Layout:** `Grid`, `Column`, `Row`, `Cell`
 * **Text:** `Title`, `Paragraph`, `Text`
 * **Interaction:** `Button`, `Clickarea`, `Link`
@@ -20,7 +20,7 @@ A bordered container element.
 
 Properties:
 
-- **type** - `normal`| `dashed` | `dotted` (optional, default `normal`)
+- **type** - `normal` | `dashed` | `dotted` (optional, default `normal`)
 - **padding** - `none` | `small` | `medium` | `large` (optional, default `large`)
 - **size** - `small` | `medium` | `large` (optional, default `large`)
 
@@ -68,9 +68,9 @@ Customization options (selector: `.panel`):
 
 - `--border-radius` (default: `0`)
 - `--margin` (default: `0`)
-- `--padding-small` (default: `--container-padding-small`)
-- `--padding-medium` (default: `--container-padding-medium`)
-- `--padding-large` (default: `--container-padding-large`)
+- `--padding-small` (default: `var(--container-padding-small)`)
+- `--padding-medium` (default: `var(--container-padding-medium)`)
+- `--padding-large` (default: `var(--container-padding-large)`)
 - `--type-normal-background-color` (default: `var(--color-secondary-background)`)
 - `--type-normal-foreground-color` (default: `var(--color-primary-foreground)`)
 - `--type-alert-background-color` (default: `var(--color-alert-background)`)
@@ -104,6 +104,30 @@ import { Modal } from '@maskingtech/designsystem';
 ```
 
 This element does not have customization options.
+
+### Navigation
+
+A navigation container for semantic content (links).
+
+Properties:
+
+- **padding** - `none` | `small` | `medium` | `large` (optional, default `none`)
+- **children** - ReactNode (optional)
+
+Example:
+
+```tsx
+import { Navigation } from '@maskingtech/designsystem';
+
+<Navigation padding='small'>Main Menu</Navigation>
+```
+
+Customization options (selector: `.navigation`):
+
+- `--margin` (default: `0`)
+- `--padding-small` (default: `var(--container-padding-small)`)
+- `--padding-medium` (default: `var(--container-padding-medium)`)
+- `--padding-large` (default: `var(--container-padding-large)`)
 
 ## Layout elements
 

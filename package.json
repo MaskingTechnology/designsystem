@@ -1,7 +1,7 @@
 {
   "name": "@maskingtech/designsystem",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "repository": {
     "url": "https://github.com/MaskingTechnology/designsystem"
@@ -10,7 +10,8 @@
     "build": "vite build",
     "clean": "rimraf dist",
     "lint": "eslint",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "version": "npm version $VERSION --no-git-tag-version"
   },
   "exports": {
     ".": "./dist/mtds.js",

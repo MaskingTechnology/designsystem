@@ -11,7 +11,7 @@ export default function Tab({ title, active, onClick }: Props)
 {
     return <Column alignX='stretch'>
         <ClickArea padding='medium' effect='hover' alignX='center' onClick={onClick}>
-            <Text value={title} weight={active ? 'bold' : 'normal'} size='large' />
+            <Text value={title} type={active ? 'primary' : 'secondary'} weight={active ? 'bold' : 'normal'} size='large' />
         </ClickArea>
     </Column>;
 }
