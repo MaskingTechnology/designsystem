@@ -28,6 +28,7 @@ export { TextArea } from './elements/textarea/TextArea';
 export { TextBox } from './elements/textbox/TextBox';
 export { Title } from './elements/title/Title';
 
+export { Menu } from './components/menu/Menu';
 export { Tabs } from './components/tabs/Tabs';
 
 export { CenteredLayout } from './layouts/centered/Centered';
