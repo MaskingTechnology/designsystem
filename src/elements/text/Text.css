@@ -9,7 +9,7 @@
         --size-medium: var(--element-font-medium);
         --size-large: var(--element-font-large);
 
-        display: inline;
+        display: inline-block;
 
         &.type-primary
         {

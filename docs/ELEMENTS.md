@@ -373,7 +373,7 @@ Properties:
 - **type** - `primary` | `secondary` (optional, default `primary`)
 - **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **weight** - `light` | `normal` | `bold` (optional, default `normal`)
-- **wrap** - `none` | `normal` | `break-word` (optional, default `none`)
+- **wrap** - `none` | `normal` | `break-word` (optional, default `normal`)
 
 Example:
 
