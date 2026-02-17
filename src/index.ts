@@ -14,6 +14,7 @@ export { Image } from './elements/image/Image';
 export { Input } from './elements/input/Input';
 export { Label } from './elements/label/Label';
 export { Link } from './elements/link/Link';
+export { List } from './elements/list/List';
 export { Modal } from './elements/modal/Modal';
 export { Navigation } from './elements/navigation/Navigation';
 export { Panel } from './elements/panel/Panel';
