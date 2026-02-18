@@ -4,7 +4,7 @@ The following elements are available:
 
 * **Container:** `Border`, `Panel`, `Modal`, `Navigation`
 * **Layout:** `Grid`, `Column`, `Row`, `Cell`
-* **Text:** `Title`, `Paragraph`, `Text`
+* **Text:** `Title`, `Paragraph`, `Text`, `List`
 * **Interaction:** `Button`, `Clickarea`, `Link`
 * **Form:** `Form`, `Input`, `Label`, `DateTime`, `Select`, `TextArea`, `TextBox`, `CheckBox`
 * **Graphic:** `Avatar`, `Icon`, `Image`
@@ -373,7 +373,7 @@ Properties:
 - **type** - `primary` | `secondary` (optional, default `primary`)
 - **size** - `small` | `medium` | `large` (optional, default `medium`)
 - **weight** - `light` | `normal` | `bold` (optional, default `normal`)
-- **wrap** - `none` | `normal` | `break-word` (optional, default `none`)
+- **wrap** - `none` | `normal` | `break-word` (optional, default `normal`)
 
 Example:
 
@@ -391,6 +391,35 @@ Customization options (selector: `.text`):
 - `--size-medium` (default: `var(--element-font-medium)`)
 - `--size-large` (default: `var(--element-font-large)`)
 - weights are defined at global level.
+
+### List
+
+Element for ordered and unordered lists.
+
+`List` properties:
+
+- **type** - `ordered` | `unordered` (required)
+- **size** - `small` | `medium` | `large` (optional, default `medium`)
+- **children** - `ReactElement<List.Item>` (required)
+
+`List.Item` properties:
+
+- **children** - ReactNode
+
+Example:
+
+```tsx
+import { List } from '@maskingtech/designsystem';
+
+<List type='ordered' size='small'>
+  <List.Item>First</List.Item>
+  <List.Item>Second</List.Item>
+</List>
+```
+
+Customization options (selector: `.list`):
+
+- `--margin` (default: `var(--margin)`)
 
 ## Interaction elements
 

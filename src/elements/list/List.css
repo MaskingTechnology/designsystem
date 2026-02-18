@@ -1,0 +1,24 @@
+.mtds
+{
+    .list
+    {
+        --margin: 0;
+
+        margin: var(--margin);
+        
+        &.size-small
+        {
+            font-size: var(--size-small);
+        }
+
+        &.size-medium
+        {
+            font-size: var(--size-medium);
+        }
+
+        &.size-large
+        {
+            font-size: var(--size-large);
+        }
+    }
+}
