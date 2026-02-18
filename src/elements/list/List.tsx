@@ -15,7 +15,6 @@ type Props = {
 export function List({ type, size = 'medium', children }: Props)
 {
     const className = 'list'
-        + ' type-' + type
         + ' size-' + size;
 
     return type === 'ordered'
