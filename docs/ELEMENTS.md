@@ -2,10 +2,10 @@
 
 The following elements are available:
 
-* **Container:** `Border`, `Panel`, `Modal`, `Navigation`
+* **Container:** `Border`, `Details`, `Panel`, `Modal`, `Navigation`
 * **Layout:** `Grid`, `Column`, `Row`, `Cell`
 * **Text:** `Title`, `Paragraph`, `Text`, `List`
-* **Interaction:** `Button`, `ClickArea`, `Collapsible`, `Link`
+* **Interaction:** `Button`, `ClickArea`, `Link`
 * **Form:** `Form`, `Input`, `Label`, `DateTime`, `Select`, `TextArea`, `TextBox`, `CheckBox`
 * **Graphic:** `Avatar`, `Icon`, `Image`
 * **Other:** `Ruler`, `Spinner`
@@ -45,6 +45,31 @@ Customization options (selector: `.border`):
 - `--size-large` (default: `var(--element-border-small)`)
 - `--size-medium` (default: `var(--element-border-medium)`)
 - `--size-small` (default: `var(--element-border-large)`)
+
+### Details
+
+A widget that can expand and collapse its content. Multiple details containers with the same `name` will be grouped together, allowing only one to be open at a time.
+
+Properties:
+
+- **open** - boolean (optional, default `false`)
+- **name** - string (optional)
+- **summary** - ReactNode (required)
+- **children** - ReactNode (required)
+
+Example:
+
+```tsx
+import { Details } from '@maskingtech/designsystem';
+
+<Details name='my-details' open={true} summary='More details'>
+  <p>Here are the details...</p>
+</Details>
+```
+
+Customization options (selector: `.details`):
+
+- `--padding` (default: `var(--container-padding-small) 0 0 0`)
 
 ### Panel
 
@@ -491,29 +516,6 @@ Customization options (selector: `.clickarea`):
 - `--padding-small` (default: `var(--input-padding-small)`)
 - `--padding-medium` (default: `var(--input-padding-medium)`)
 - `--padding-large` (default: `var(--input-padding-large)`)
-
-### Collapsible
-
-A widget that can expand and collapse its content.
-
-Properties:
-
-- **summary** - ReactNode (required)
-- **children** - ReactNode (required)
-
-Example:
-
-```tsx
-import { Collapsible } from '@maskingtech/designsystem';
-
-<Collapsible summary='More details'>
-  <p>Here are the details...</p>
-</Collapsible>
-```
-
-Customization options (selector: `.collapsible`):
-
-- `--padding-small` (default: `var(--container-padding-small) 0 0 0`)
 
 ### Link
 

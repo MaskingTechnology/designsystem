@@ -1,12 +1,12 @@
 .mtds
 {
-    .collapsible
+    .details
     {
-        --padding-small: var(--container-padding-small) 0 0 0;
+        --padding: var(--container-padding-small) 0 0 0;
 
         .content
         {
-            padding: var(--padding-small);
+            padding: var(--padding);
             display: flex;
             flex-direction: column;
             align-items: stretch;

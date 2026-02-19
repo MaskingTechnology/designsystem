@@ -1,16 +1,18 @@
 
 import type { ReactNode } from 'react';
 
-import './Collapsible.css';
+import './Details.css';
 
 type Props = {
+    readonly open?: boolean;
+    readonly name?: string;
     readonly summary: ReactNode;
     readonly children: ReactNode;
 };
 
-export function Collapsible({ summary, children }: Props)
+export function Details({ open = false, name, summary, children }: Props)
 {
-    return <details className='collapsible'>
+    return <details className='details' open={open} name={name}>
         <summary>{summary}</summary>
         <div className='content'>{children}</div>
     </details>;
