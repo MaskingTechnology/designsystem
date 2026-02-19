@@ -11,7 +11,7 @@
         width: 100vw;
         min-height: 100vh;
 
-        & > .content
+        & > main
         {
             box-sizing: border-box;
             padding: 1rem;
@@ -22,7 +22,7 @@
 
         @container (max-width: 499px)
         {
-            & > .content
+            & > main
             {
                 padding: 0.5rem;
             }
