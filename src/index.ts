@@ -33,6 +33,7 @@ export { Menu } from './components/menu/Menu';
 export { Tabs } from './components/tabs/Tabs';
 
 export { CenteredLayout } from './layouts/centered/Centered';
+export { PortraitLayout } from './layouts/portrait/Portrait';
 export { SidebarLayout } from './layouts/sidebar/Sidebar';
 
 export { DesignSystem } from './DesignSystem';
