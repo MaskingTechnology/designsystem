@@ -7,6 +7,7 @@ export { CheckBox } from './elements/checkbox/CheckBox';
 export { ClickArea } from './elements/clickarea/ClickArea';
 export { Column } from './elements/column/Column';
 export { DateTime } from './elements/datetime/DateTime';
+export { Details } from './elements/details/Details';
 export { Form } from './elements/form/Form';
 export { Grid } from './elements/grid/Grid';
 export { Icon } from './elements/icon/Icon';
