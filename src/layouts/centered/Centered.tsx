@@ -9,9 +9,9 @@ type Props = {
 
 export function CenteredLayout({ children }: Props)
 {
-    return <main className='layout-centered'>
-        <div className='content'>
+    return <div className='layout-centered'>
+        <main>
             {children}
-        </div>
-    </main>;
+        </main>
+    </div>;
 }
