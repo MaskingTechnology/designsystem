@@ -5,6 +5,7 @@ export { Button } from './elements/button/Button';
 export { Cell } from './elements/cell/Cell';
 export { CheckBox } from './elements/checkbox/CheckBox';
 export { ClickArea } from './elements/clickarea/ClickArea';
+export { Collapsible } from './elements/collapsible/Collapsible';
 export { Column } from './elements/column/Column';
 export { DateTime } from './elements/datetime/DateTime';
 export { Form } from './elements/form/Form';

@@ -5,7 +5,7 @@ The following elements are available:
 * **Container:** `Border`, `Panel`, `Modal`, `Navigation`
 * **Layout:** `Grid`, `Column`, `Row`, `Cell`
 * **Text:** `Title`, `Paragraph`, `Text`, `List`
-* **Interaction:** `Button`, `Clickarea`, `Link`
+* **Interaction:** `Button`, `ClickArea`, `Collapsible`, `Link`
 * **Form:** `Form`, `Input`, `Label`, `DateTime`, `Select`, `TextArea`, `TextBox`, `CheckBox`
 * **Graphic:** `Avatar`, `Icon`, `Image`
 * **Other:** `Ruler`, `Spinner`
@@ -486,11 +486,34 @@ import { ClickArea } from '@maskingtech/designsystem';
 
 Customization options (selector: `.clickarea`):
 
-- `--background-hover-color` (default `var(--input-background-hover-color)`)
+- `--background-hover-color` (default: `var(--input-background-hover-color)`)
 - `--margin` (default: `0`)
 - `--padding-small` (default: `var(--input-padding-small)`)
 - `--padding-medium` (default: `var(--input-padding-medium)`)
 - `--padding-large` (default: `var(--input-padding-large)`)
+
+### Collapsible
+
+A widget that can expand and collapse its content.
+
+Properties:
+
+- **summary** - ReactNode (required)
+- **children** - ReactNode (required)
+
+Example:
+
+```tsx
+import { Collapsible } from '@maskingtech/designsystem';
+
+<Collapsible summary='More details'>
+  <p>Here are the details...</p>
+</Collapsible>
+```
+
+Customization options (selector: `.collapsible`):
+
+- `--padding-small` (default: `var(--container-padding-small) 0 0 0`)
 
 ### Link
 

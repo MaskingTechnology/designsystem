@@ -1,0 +1,15 @@
+.mtds
+{
+    .collapsible
+    {
+        --padding-small: var(--container-padding-small) 0 0 0;
+
+        .content
+        {
+            padding: var(--padding-small);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+}
