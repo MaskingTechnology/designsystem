@@ -4,6 +4,11 @@
     {
         --padding: var(--container-padding-small) 0 0 0;
 
+        .summary
+        {
+            cursor: pointer;
+        }
+        
         .content
         {
             padding: var(--padding);

@@ -13,7 +13,7 @@ type Props = {
 export function Details({ open = false, name, summary, children }: Props)
 {
     return <details className='details' open={open} name={name}>
-        <summary>{summary}</summary>
+        <summary className='summary'>{summary}</summary>
         <div className='content'>{children}</div>
     </details>;
 }
