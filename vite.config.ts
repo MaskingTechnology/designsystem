@@ -8,7 +8,6 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      rollupTypes: true,
       include: ['src']
     }),
   ],
