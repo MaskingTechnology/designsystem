@@ -38,5 +38,12 @@
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.54.0"
+  },
+  "engines": {
+    "node": ">= 22.9.0"
+  },
+  "packageManager": "npm@11.16.0",
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }
