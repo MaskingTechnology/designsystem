@@ -10,7 +10,8 @@ permissions:
 
 jobs:
   publish:
-    environment: release
+    environment:
+      name: release
     runs-on: ubuntu-latest
     steps:
     - name: ⚙️ Checkout Repository
