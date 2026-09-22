@@ -8,13 +8,14 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      include: ['src']
+      bundleTypes: true
     }),
   ],
 
   build: {
+    emptyOutDir: true,
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: resolve(import.meta.dirname, 'src/index.ts'),
       formats: ['es'],
       fileName: 'mtds'
     },
