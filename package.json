@@ -1,7 +1,7 @@
 {
   "name": "@maskingtech/designsystem",
   "private": false,
-  "version": "0.0.9",
+  "version": "0.1.0",
   "type": "module",
   "repository": {
     "url": "https://github.com/MaskingTechnology/designsystem"
@@ -41,7 +41,7 @@
     "@rollup/rollup-linux-x64-gnu": "^4.63.4"
   },
   "engines": {
-    "node": ">= 22.9.0"
+    "node": ">=24"
   },
   "packageManager": "npm@11.16.0",
   "allowScripts": {
